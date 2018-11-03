@@ -10,8 +10,10 @@ class Game {
 
 class Candidates{
     constructor(){
-        this.candidateName = [{name: " ", right: 0, steals: 0, totalPoints: 0,}];
-        this.candidateTwo = [{name: " ", right: 0, steals: 0, totalPoints: 0,}];
+        this.candidatesName = ["name1", "name2"];
+        this.candidatesAnsweredCorrectly = [];
+        this.candidatesSteals = [];
+        this.candidatesTotalPoints = [];
     }
 
     enterCandidateName(){
@@ -93,8 +95,10 @@ class Questions{
  
 function clickApply(){
         let clickOne = prompt("Candidate 1: Please enter your name:");
+        let nameOneHtml = document.getElementsByClassName("namePromptOne");
+        nameOneHtml.innerHTML = clickOne;
+
         let playerOneName = clickOne;
-        let playerOneConnector = document.getElementsByClassName("namePromptOne");
 
         newCandidate = new Candidates();
 
@@ -102,32 +106,38 @@ function clickApply(){
 
         if (playerOneName != null) {
             
-            newCandidate.candidateOne[0]["name"] = playerOneName;
-            console.log(newCandidate.candidateOne);
-
+            newCandidate.candidatesName[0] = playerOneName;
+            console.log(newCandidate.candidatesName); 
             
         }
-        
+
+        if(newCandidate.candidatesName[0] != null){
+            let clickTwo = prompt("Candidate 2: Please enter your name:");
+            let nameTwoHtml = document.getElementsByClassName("namePromptTwo");
+            nameTwoHtml.innerHTML = clickTwo;
+            let playerTwoName = clickTwo;
+           
+
+            console.log("2" + playerTwoName);
+            
+            newCandidate.candidatesName[1] = playerTwoName;
+            console.log(newCandidate.candidatesName); 
+            
+        }
+
+     // if(newCandidate.candidatesName.length === 2){
+        //     newGame = new Game;
+     // }
     }
+
+
+        // var person = prompt("Please enter your first name", "Johnny");
+        // var x = document.getElementById('personName');
+        // x.innerHTML = person;
+
     
-    function clickApplyAgain(){
-        let clickOne = prompt("Candidate 1: Please enter your name:");
-        let playerOneName = clickOne;
-        let playerOneConnector = document.getElementsByClassName("namePromptOne");
 
-        newCandidate = new Candidates();
-
-        console.log("1" + playerOneName);
-
-        if (playerOneName != null) {
-            
-            newCandidate.candidateOne[0]["name"] = playerOneName;
-            console.log(newCandidate.candidateOne);
-
-            
-        }
-        
-    }
+    
     
     
 
