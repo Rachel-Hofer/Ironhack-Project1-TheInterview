@@ -2,22 +2,23 @@
     let newCandidate;
     let newQuestion;
 
+
 class Game {
     constructor(){
-        this.winner = [];
+        this.winner;
     }
 };
 
 class Candidates{
     constructor(){
         this.candidatesName = ["name1", "name2"];
-        this.candidatesAnsweredCorrectly = [];
-        this.candidatesSteals = [];
-        this.candidatesTotalPoints = [];
+        this.candidatesAnsweredCorrectly = [0, 0];
+        this.candidatesSteals = [0, 0];
+        this.candidatesTotalPoints = [0, 0];
     }
 
     enterCandidateName(){
-        console.log(this.candidateOne[0].name);
+        console.log("this is running" + this.candidateOne[0].name);
     }
 };
 
@@ -92,49 +93,44 @@ class Questions{
 
 
 //start logic here
- 
+$(document).ready(function() { //JQuery start wrap
+
+    $(".applyButton").click(function(){
+    newCandidate = new Candidates();
+    clickApply();
+    })
+
+
 function clickApply(){
-        let clickOne = prompt("Candidate 1: Please enter your name:");
-        let nameOneHtml = document.getElementsByClassName("namePromptOne");
-        nameOneHtml.innerHTML = clickOne;
+    let clickOne = prompt("Candidate 1: Please enter your name:");
+    $(".namePromptOne").html(clickOne);
 
-        let playerOneName = clickOne;
+    console.log(" = == = ", $(".namePromptOne"))
+    console.log("1" + clickOne);
 
-        newCandidate = new Candidates();
+    // if (clickOne != null) {
+        
+        newCandidate.candidatesName[0] = clickOne;
+        console.log(newCandidate.candidatesName); 
+        
 
-        console.log("1" + playerOneName);
-
-        if (playerOneName != null) {
-            
-            newCandidate.candidatesName[0] = playerOneName;
-            console.log(newCandidate.candidatesName); 
-            
-        }
-
-        if(newCandidate.candidatesName[0] != null){
-            let clickTwo = prompt("Candidate 2: Please enter your name:");
-            let nameTwoHtml = document.getElementsByClassName("namePromptTwo");
-            nameTwoHtml.innerHTML = clickTwo;
-            let playerTwoName = clickTwo;
-           
-
-            console.log("2" + playerTwoName);
-            
-            newCandidate.candidatesName[1] = playerTwoName;
-            console.log(newCandidate.candidatesName); 
-            
-        }
-
-     // if(newCandidate.candidatesName.length === 2){
-        //     newGame = new Game;
-     // }
+    if(newCandidate.candidatesName[0] != null){
+        let clickTwo = prompt("Candidate 2: Please enter your name:");
+        $(".namePromptTwo").html(clickTwo);
+       
+        console.log("2" + clickTwo);
+        
+        newCandidate.candidatesName[1] = clickTwo;
+        console.log(newCandidate.candidatesName); 
+        
     }
 
+    // if(newCandidate.candidatesName.length === 2){
+    //     newGame = new Game;
+    // }
 
-        // var person = prompt("Please enter your first name", "Johnny");
-        // var x = document.getElementById('personName');
-        // x.innerHTML = person;
-
+}
+}) //JQuery end wrap
     
 
     

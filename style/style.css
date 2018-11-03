@@ -1,7 +1,7 @@
 body {
     background-image: url("https://static.adweek.com/adweek.com-prod/wp-content/uploads/2018/07/ad-jobs-page-20181.gif");
+    background-repeat: no-repeat;
     background-size: cover;
-    /* background: no-repeat; */
 }
 
 .applyButton {
