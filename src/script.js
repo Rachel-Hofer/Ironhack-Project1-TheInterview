@@ -1,4 +1,6 @@
     let newGame;
+    let newCandidate;
+    let newQuestion;
 
 class Game {
     constructor(){
@@ -8,12 +10,12 @@ class Game {
 
 class Candidates{
     constructor(){
-        this.candidateOne = [{name: " ", right: 0, steals: 0, totalPoints: 0,}];
+        this.candidateName = [{name: " ", right: 0, steals: 0, totalPoints: 0,}];
         this.candidateTwo = [{name: " ", right: 0, steals: 0, totalPoints: 0,}];
     }
 
     enterCandidateName(){
-
+        console.log(this.candidateOne[0].name);
     }
 };
 
@@ -90,24 +92,42 @@ class Questions{
 //start logic here
  
 function clickApply(){
-        let clickOne = prompt("Please enter your name:");
+        let clickOne = prompt("Candidate 1: Please enter your name:");
         let playerOneName = clickOne;
-        console.log("2" + playerOneName);
+        let playerOneConnector = document.getElementsByClassName("namePromptOne");
 
-        // if (clickApply.clickOne != null) {
-        //     Candidates.candidateOne.name.push(playerOneName);
+        newCandidate = new Candidates();
 
-        //     document.getElementByClass("namePromptOne").innerHTML =
-        //     this.playerOneName;
-        
-        //     console.log(this.playerOneName);
-        // }
+        console.log("1" + playerOneName);
 
-        // for(var i = 0; i < candidateOne.length; i++)
-        // Candidates.candidateOne.push.prompt("Please enter your name:");
+        if (playerOneName != null) {
+            
+            newCandidate.candidateOne[0]["name"] = playerOneName;
+            console.log(newCandidate.candidateOne);
+
+            
+        }
         
     }
-       
+    
+    function clickApplyAgain(){
+        let clickOne = prompt("Candidate 1: Please enter your name:");
+        let playerOneName = clickOne;
+        let playerOneConnector = document.getElementsByClassName("namePromptOne");
+
+        newCandidate = new Candidates();
+
+        console.log("1" + playerOneName);
+
+        if (playerOneName != null) {
+            
+            newCandidate.candidateOne[0]["name"] = playerOneName;
+            console.log(newCandidate.candidateOne);
+
+            
+        }
+        
+    }
     
     
 

@@ -14,14 +14,16 @@ body {
 }
 
 .apply {
-    position: sticky;
-
+    width: 100%;
+    display: flex;
+    justify-content: center;
     margin-right: 20%;
+    position: relative;
+    bottom: -650px;
+    left: 300px;
  }
 
  .jobDescription {
-    /* display: flex;
-    align-content: center; */
     position: absolute;
     top: 14%;
     left: 34.4%;
@@ -30,8 +32,6 @@ body {
     width: 32vw;
  }
 
- /* .jobPostImage {
-     display: flex;
-     bottom: 0;
-     right: 0;
- } */
+ol {
+    list-style: none;
+}
