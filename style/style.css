@@ -1,0 +1,37 @@
+body {
+    background-image: url("https://static.adweek.com/adweek.com-prod/wp-content/uploads/2018/07/ad-jobs-page-20181.gif");
+    background-size: cover;
+    /* background: no-repeat; */
+}
+
+.applyButton {
+    background-color: #ff6666;
+    font-size: 64px;
+    color: white;
+    padding: 22px;
+    font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace; 
+    font-weight: 700;
+}
+
+.apply {
+    position: sticky;
+
+    margin-right: 20%;
+ }
+
+ .jobDescription {
+    /* display: flex;
+    align-content: center; */
+    position: absolute;
+    top: 14%;
+    left: 34.4%;
+    font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace; 
+    font-size: 18px;
+    width: 32vw;
+ }
+
+ /* .jobPostImage {
+     display: flex;
+     bottom: 0;
+     right: 0;
+ } */
