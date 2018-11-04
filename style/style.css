@@ -1,13 +1,19 @@
 .screenOne  {
     background-image: url("../img/job\ posting2.png");
+    /* opacity: .5;
+    filter: alpha(opacity=50); */
 }
 
 .screenTwo {
     background-image: url("../img/waitingRoom.png");
+    /* opacity: .5;
+    filter: alpha(opacity=50); */
 }
 
 .screenThree {
     background-image: url("../img/interviewer.png");
+    /* opacity: .5;
+    filter: alpha(opacity=50); */
 }
 
 .hideApplyButton {
@@ -22,6 +28,11 @@
     display: none;
 }
 
+.applyButton:hover {
+    opacity: .5;
+    filter: alpha(opacity=50);
+}
+
 .applyButton {
     background-color: #ff6666;
     font-size: 64px;
@@ -29,27 +40,47 @@
     padding: 22px;
     font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace; 
     font-weight: 700;
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+    border: 3px solid white;
 }
 
 .apply {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-right: 20%;
     position: relative;
-    bottom: -650px;
-    left: 300px;
+    left: 36%;
+    margin-top: 38%;
  }
 
+ .instructions {
+    text-decoration: underline;
+ }
 
  .jobDescription {
-    position: absolute;
-    top: 14%;
-    left: 25%;
+    padding: 3%;
     font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace; 
     font-size: 18px;
-    width: 50vw;
+    width: 40vw;
+    background-color: #d6f1f9;
+    border: 3px solid gray;
+    position: absolute;
+    top: 6%;
+    left: 4%;
  }
+
+ .topOfInstructions {
+    margin-top: 2%;
+    margin-bottom: 4%;
+    margin-left: 3%;
+}
+
+ .requireList {
+     margin-bottom: 5%;
+ }
+
+.requireList:before {
+    content: "\2713";
+  }
 
 ol {
     list-style: none;
@@ -66,6 +97,23 @@ ol {
 .active {
     font-size: 36px;
     display: flex;
+    justify-content: center;
     flex-direction: column;
+    width: 30vw;
+    margin-left: 34%;
+    padding-top: 5%;
+}
+
+.levelButton:hover {
+        opacity: .5;
+        filter: alpha(opacity=50);
+    }
+
+.levelButton {
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+    margin-bottom: 23%;
+    padding: 5%;
+    border-radius: 25px;
 }
 

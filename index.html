@@ -15,6 +15,7 @@
 
     <!-- my JSlinked -->
   <script src="src/script.js"></script>
+  <script src="src/logic.js"></script>
 
 </head>
 
@@ -24,15 +25,14 @@
   <div class="jobDescription">    <!-- redo to make cleaner code -->
       <h3 class="instructions">Job Requirements:</h3>
   
-      <p>Two highly-qualified candidates will go head to head in an intense round of interview questions being asked by the company's CEO.
-
-      Questions that are mandatory for this position will be randomly selected and presented to each Candidate. 10 seconds will be given 
-      to select an answer. If answered correctly, the Candidate will receive +1 point and the next Candidate will take a turn. If answered 
-      incorrectly, the other Candidate has the opportunity to respond (within 5 seconds) to the same question correctly. If answered correctly, 
-      Candidate will receive +2 points.
-
-      The interview will come to an end when a Candidate achieves 10 points. This Candidate will be given the job offer.</p>
-  
+      <p class="topOfInstructions">Two highly-qualified candidates will go head to head in an intense round of interview questions being asked by the company's CEO.</p>
+        <ol class="directions">
+      <li class="requireList">  Questions will alternate between each Candidate, each with 10 seconds to answer</li>
+      <li class="requireList">  Correct answers = +1 point</li>
+      <li class="requireList">  If either Candidate answers incorrectly, the opponent has the opportunity to "steal" the question, giving a correct answer within 5 seconds</li>
+      <li class="requireList">  Stolen answers = +2 point</li>
+      <li class="requireList">  The interview will come to an end when a Candidate achieves 10 points. This Candidate will receive a job offer.</li>
+    </ol>
   </div>
 
     <div class="apply">
@@ -50,10 +50,10 @@
       </ol>
   </div> 
 
-  <div class="levels active">
-      <button class="jrLevel" type="button">Jr-Level Web Developer</button>
-      <button class="midLevel" type="button">Mid-Level Web Developer</button>
-      <button class="srLevel" type="button">Sr-Level Web Developer</button>
+  <div class="job levels active">
+      <button class="jrLevel levelButton" type="button">Jr-Level Web Developer</button>
+      <button class="midLevel levelButton" type="button">Mid-Level Web Developer</button>
+      <button class="srLevel levelButton" type="button">Sr-Level Web Developer</button>
   </div>
  
 </div> <!--end of background image div-->
