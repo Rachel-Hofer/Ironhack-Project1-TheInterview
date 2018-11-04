@@ -1,7 +1,17 @@
-body {
-    background-image: url("https://static.adweek.com/adweek.com-prod/wp-content/uploads/2018/07/ad-jobs-page-20181.gif");
-    background-repeat: no-repeat;
-    background-size: cover;
+.screenOne  {
+    background-image: url("../img/job\ posting2.png");
+}
+
+.screenTwo {
+    background-image: url("../img/waitingRoom.png");
+}
+
+.screenThree {
+    background-image: url("../img/interviewer.png");
+}
+
+.hideApplyButton {
+    display: none;
 }
 
 .applyButton {
@@ -23,15 +33,24 @@ body {
     left: 300px;
  }
 
+ .hideJobDescription {
+    display: none;
+}
+
  .jobDescription {
     position: absolute;
     top: 14%;
-    left: 34.4%;
+    left: 25%;
     font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace; 
     font-size: 18px;
-    width: 32vw;
+    width: 50vw;
  }
 
 ol {
     list-style: none;
 }
+
+.candidateStats {
+    display: none
+}
+

@@ -7,6 +7,25 @@ class Game {
     constructor(){
         this.winner;
     }
+
+    // showScreenOne(){
+    //     $("body").show("screenOne")
+    // }
+
+    showScreenTwo(){
+        $("body").toggleClass("screenTwo")
+        $(".applyButton").hide();
+        $(".jobDescription").hide();
+    }
+
+    // hideApplyButton(){
+    //     $(".applyButton").hide();
+    // }
+
+    // hideJobDescription(){
+    //     $(".jobDescription").hide();
+    // }
+
 };
 
 class Candidates{
@@ -94,29 +113,30 @@ class Questions{
 
 //start logic here
 $(document).ready(function() { //JQuery start wrap
-
     $(".applyButton").click(function(){
     newCandidate = new Candidates();
     clickApply();
-    })
+    
+    if(newCandidate.candidatesName.length === 2){
+        newGame = new Game;
+        newGame.showScreenTwo();
+    }
+})
 
 
 function clickApply(){
     let clickOne = prompt("Candidate 1: Please enter your name:");
-    $(".namePromptOne").html(clickOne);
+    $(".namePromptOne").html("Candidate 1: " + clickOne);
 
     console.log(" = == = ", $(".namePromptOne"))
     console.log("1" + clickOne);
-
-    // if (clickOne != null) {
         
         newCandidate.candidatesName[0] = clickOne;
         console.log(newCandidate.candidatesName); 
-        
 
     if(newCandidate.candidatesName[0] != null){
         let clickTwo = prompt("Candidate 2: Please enter your name:");
-        $(".namePromptTwo").html(clickTwo);
+        $(".namePromptTwo").html("Candidate 2: " + clickTwo);
        
         console.log("2" + clickTwo);
         
@@ -124,10 +144,6 @@ function clickApply(){
         console.log(newCandidate.candidatesName); 
         
     }
-
-    // if(newCandidate.candidatesName.length === 2){
-    //     newGame = new Game;
-    // }
 
 }
 }) //JQuery end wrap
