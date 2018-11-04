@@ -14,6 +14,14 @@
     display: none;
 }
 
+.hideApplyButton {
+    display: none;
+}
+
+.hideCandidateNames {
+    display: none;
+}
+
 .applyButton {
     background-color: #ff6666;
     font-size: 64px;
@@ -33,9 +41,6 @@
     left: 300px;
  }
 
- .hideJobDescription {
-    display: none;
-}
 
  .jobDescription {
     position: absolute;
@@ -52,5 +57,15 @@ ol {
 
 .candidateStats {
     display: none
+}
+
+.levels {
+    display: none;
+}
+
+.active {
+    font-size: 36px;
+    display: flex;
+    flex-direction: column;
 }
 

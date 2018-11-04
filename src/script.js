@@ -8,24 +8,12 @@ class Game {
         this.winner;
     }
 
-    // showScreenOne(){
-    //     $("body").show("screenOne")
-    // }
-
     showScreenTwo(){
         $("body").toggleClass("screenTwo")
         $(".applyButton").hide();
         $(".jobDescription").hide();
+        $(".playerStats").hide();
     }
-
-    // hideApplyButton(){
-    //     $(".applyButton").hide();
-    // }
-
-    // hideJobDescription(){
-    //     $(".jobDescription").hide();
-    // }
-
 };
 
 class Candidates{
@@ -113,6 +101,8 @@ class Questions{
 
 //start logic here
 $(document).ready(function() { //JQuery start wrap
+    $(".levels").removeClass("active");
+
     $(".applyButton").click(function(){
     newCandidate = new Candidates();
     clickApply();
@@ -120,6 +110,8 @@ $(document).ready(function() { //JQuery start wrap
     if(newCandidate.candidatesName.length === 2){
         newGame = new Game;
         newGame.showScreenTwo();
+        $(".levels").removeClass();
+        $(".levels").addClass("active");
     }
 })
 
