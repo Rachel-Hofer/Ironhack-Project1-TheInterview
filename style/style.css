@@ -1,3 +1,7 @@
+body {
+    padding: 0;
+}
+
 .screenOne  {
     background-image: url("../img/job\ posting2.png");
     /* opacity: .5;
@@ -43,15 +47,15 @@
     opacity: 1.0;
     filter: alpha(opacity=100);
     border: 3px solid white;
+    position: relative;
+    left: 35%;
+    margin-top: 39%;
 }
 
 .apply {
     width: 100%;
-    position: relative;
-    left: 36%;
-    margin-top: 38%;
  }
-
+ 
  .instructions {
     text-decoration: underline;
  }
@@ -86,8 +90,33 @@ ol {
     list-style: none;
 }
 
-.candidateStats {
-    display: none
+.playerStats {
+    background-color: #ef5b3e;
+    color: white;
+    font-size: 26px;
+    width: 25vw;
+    text-align: left;
+    padding-left: 6%;
+ }
+
+ .showNewColor {
+    display: grid; 
+    background-color: #6d82ce;
+    color: white;
+    font-size: 26px;
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 6%;
+ }
+
+.defaultPoints {
+    display: none;
+}
+
+.statsShow {
+    display: flex;
 }
 
 .levels {
@@ -104,6 +133,20 @@ ol {
     padding-top: 5%;
 }
 
+.startQuestions {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 36px;
+    width: 30vw;
+    margin-left: 34%;
+    padding-top: 5%;
+}
+
+.defaultStart {
+    display: none;
+}
+
 .levelButton:hover {
         opacity: .5;
         filter: alpha(opacity=50);
@@ -115,5 +158,28 @@ ol {
     margin-bottom: 23%;
     padding: 5%;
     border-radius: 25px;
+}
+
+.theQuestion {
+    display: none;
+}
+
+.theOptions {
+    display: none;
+}
+
+.showEverything {
+    display: flex;
+    font-size: 32px;
+}
+
+#revealAnswers {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 36px;
+    width: 30vw;
+    margin-left: 34%;
+    padding-top: 5%;
 }
 

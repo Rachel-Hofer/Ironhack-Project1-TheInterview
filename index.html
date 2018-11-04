@@ -20,14 +20,14 @@
 </head>
 
 <body class="screenOne">
- 
+
 
   <div class="jobDescription">    <!-- redo to make cleaner code -->
       <h3 class="instructions">Job Requirements:</h3>
   
       <p class="topOfInstructions">Two highly-qualified candidates will go head to head in an intense round of interview questions being asked by the company's CEO.</p>
         <ol class="directions">
-      <li class="requireList">  Questions will alternate between each Candidate, each with 10 seconds to answer</li>
+      <li class="requireList">  Questions will alternate between Candidates, each with 10 seconds to answer</li>
       <li class="requireList">  Correct answers = +1 point</li>
       <li class="requireList">  If either Candidate answers incorrectly, the opponent has the opportunity to "steal" the question, giving a correct answer within 5 seconds</li>
       <li class="requireList">  Stolen answers = +2 point</li>
@@ -39,15 +39,19 @@
         <button class="applyButton" type="button">APPLY</button>
     </div>
 
-  <div class="playerStats">
+<div class="container-fluid"> <!--start of Bootstrap wrap-->
+
+<div class="playerStats">
+    <div class="allOfCandidateOneInfo">
     <div id="aPrompt" class="namePromptOne"> </div>
-    <ol class="candidateStats">
-      <li>Points:</li>
+    <ol class="defaultPoints">
+      <li class="scoreOne">Points:</li>
     </ol>
     <div class="namePromptTwo"> </div>
-    <ol class="candidateStats">
-        <li>Points:</li>
+    <ol class="defaultPoints">
+        <li class="scoreTwo">Points:</li>
       </ol>
+    </div>
   </div> 
 
   <div class="job levels active">
@@ -56,7 +60,23 @@
       <button class="srLevel levelButton" type="button">Sr-Level Web Developer</button>
   </div>
  
+  <div class="startInterview">
+      <button id="beginGame" class="defaultStart" type="button">Begin Interview</button>
+  </div> 
+
+
+  <div id="needToToggleQuestions" class="theQuestion"></div>
+
+  <div id="needToToggleOptions" class="theOptions">
+      <button id="answers" class="option1" type="button"></button>
+      <button id="answers" class="option2" type="button"></button>
+      <button id="answers" class="option3" type="button"></button>
+      <button id="answers" class="option4" type="button"></button>
+  </div>
+
 </div> <!--end of background image div-->
+</div> <!--end of Bootstrap wrap-->
+
 </body>
 
 

@@ -13,13 +13,18 @@ $(document).ready(function() { //JQuery start wrap
         $(".job").removeClass("levels");
         $(".job").addClass("active");
     }
-})
+    })
 
     $(".job").click(function(){
         newGame.pickLevel();
         $(".job").addClass("levels");
         $(".job").removeClass("active");
-})
+    })
+
+    $("#beginGame").click(function(){
+        newGame.beginInterview();
+
+    })
 
 
 function clickApply(){

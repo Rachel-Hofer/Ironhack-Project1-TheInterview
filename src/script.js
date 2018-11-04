@@ -11,93 +11,161 @@ class Game {
         $("body").toggleClass("screenTwo");
         $(".applyButton").hide();
         $(".jobDescription").hide();
-        // $(".playerStats").hide();
     }
 
     pickLevel(){
         $("body").toggleClass("screenThree");
-        // $(".active").addClass();
-        // $(".levels").removeClass("levels");
+        $(".playerStats").toggleClass("showNewColor");
+        $(".statsHide").toggleClass("defaultPoints");
+        $(".defaultPoints").toggleClass("statsShow");
+        $(".defaultStart").removeClass();
+        $(".defaultStart").addClass("startQuestions");
+       
+    }
+
+    beginInterview(){
+        newQuestion = new Questions;
+        let selectedLevel = newQuestion.juniorQuestions[0].question; 
+        let answerOption1 = newQuestion.juniorQuestions[0].optionA;
+        let answerOption2 = newQuestion.juniorQuestions[0].optionB;
+        let answerOption3 = newQuestion.juniorQuestions[0].optionC;
+        let answerOption4 = newQuestion.juniorQuestions[0].optionD;
+        let theActualAnswer = newQuestion.juniorQuestions[0].answer;
+        let playerOnePoints = 0;
+        let playerTwoPoints = 0;
+        let playerOneScore = $(".scoreOne").html(playerOnePoints)
+        let playerOneScore = $(".scoreOne").html(playerOnePoints)
         
+        $(".theQuestion").removeClass();
+        $(".theQuestion").addClass("showEverything");
+        $(".theOptions").removeClass();
+        $(".theOptions").addClass("showEverything");
+
+        $("#needToToggleQuestions").html(selectedLevel);
+
+        setTimeout(function() {
+            $(".option1").html(answerOption1);
+            $(".option2").html(answerOption2);
+            $(".option3").html(answerOption3);
+            $(".option4").html(answerOption4);
+          }, 3000);
+
+          if($("#answers").click === theActualAnswer){
+
+          }
+
     }
 };
 
 class Candidates{
     constructor(){
         this.candidatesName = ["name1", "name2"];
-        this.candidatesAnsweredCorrectly = [0, 0];
-        this.candidatesSteals = [0, 0];
-        this.candidatesTotalPoints = [0, 0];
+        // this.candidatesPoints = [0, 0];
+        // this.candidatesSteals = [0, 0];
+        // this.candidatesTotalPoints = [0, 0];
     }
 
-    enterCandidateName(){
-        console.log("this is running" + this.candidateOne[0].name);
-    }
+    // enterCandidateName(){
+    //     console.log("this is running" + this.candidateOne[0].name);
+    // }
 };
 
 class Questions{
     constructor(){
-        this.count = 10
-        this.counter = setInterval(timer, 1000);
-        this.juniorLevel = [
-            {
-                Question:"Question: What does HTML stand for?",
-                Answer:"Hyper text markup language",
-                optionA:"Hyper typeface main loop",
-                optionB:"Hyped terrain mock language",
-                optionC:"Hyper text markup language",
-                optionD:"Hyper type marked language"
-            },{
-                Question:"blahhhhhh?",
-                Answer:"yes",
-                optionA:"yes",
-                optionB:"no",
-                optionC:"what",
-                optionD:"blah"
-            },{
-                Question:"testtttt?",
-                Answer:"yes",
-                optionA:"yes",
-                optionB:"no",
-                optionC:"what",
-                optionD:"blah"
-            },{
-                Question:"another test?",
-                Answer:"yes",
-                optionA:"yes",
-                optionB:"no",
-                optionC:"what",
-                optionD:"blah"
-            },
-      ]
+        this.count = 10;
+        // this.counter = setInterval(timer, 1000);
+        this.juniorQuestions = [ {
+            question:"Question: What does HTML stand for?",
+            answer:"Hyper text markup language",
+            optionA:"Hyper typeface main loop",
+            optionB:"Hyped terrain mock language",
+            optionC:"Hyper text markup language",
+            optionD:"Hyper type marked language"
+        },{
+            question:"blahhhhhh?",
+            answer:"yes",
+            optionA:"yes",
+            optionB:"no",
+            optionC:"what",
+            optionD:"blah"
+        },{
+            question:"testtttt?",
+            answer:"what",
+            optionA:"yes",
+            optionB:"no",
+            optionC:"what",
+            optionD:"blah"
+        },{
+            question:"another test?",
+            answer:"blah",
+            optionA:"yes",
+            optionB:"no",
+            optionC:"what",
+            optionD:"blah"
+        }];
     };
 
-    timerCountDown(){
-        this.count -= 1;
-
-        if(this.count <= 0){
-            clearInterval(this.counter);
-            return;
-        }
-    }
-
-    whenCandidateOneAnswers(){
-        let guessedRight = Candidates.candidateOne[0].right;
-        let selectedAnswer = ["clicked"];
-        let currentQuestion = this.juniorLevel[0].question;
-    
-        if(selectedAnswer[0] === questions[0].Answer){
-            this.guessedRight += 1;
-        } 
-    }
-
-    whenCandidateTwoAnswers(){
-        let guessedRight = Candidates.candidateTwo[0].right;
-        let selectedAnswer = ["clicked"];
-        let currentQuestion = this.juniorLevel[0].question;
-    
-        if(selectedAnswer[0] === questions[0].Answer){
-            this.guessedRight += 1;
-        } 
-    }
 } //end of classes & methods
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // timerCountDown(){
+    //     this.count -= 1;
+
+    //     if(this.count <= 0){
+    //         clearInterval(this.counter);
+    //         return;
+    //     }
+    // }
+
+
+    // makeQuestionToggle(){
+    //     $(".questionOptions").toggleClass("showQuestions");
+    // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // whenCandidateOneAnswers(){
+    //     let guessedRight = Candidates.candidateOne[0].right;
+    //     let selectedAnswer = ["clicked"];
+    //     let currentQuestion = this.juniorLevel[0].question;
+    
+    //     if(selectedAnswer[0] === questions[0].Answer){
+    //         this.guessedRight += 1;
+    //     } 
+    // }
+
+    // whenCandidateTwoAnswers(){
+    //     let guessedRight = Candidates.candidateTwo[0].right;
+    //     let selectedAnswer = ["clicked"];
+    //     let currentQuestion = this.juniorLevel[0].question;
+    
+    //     if(selectedAnswer[0] === questions[0].Answer){
+    //         this.guessedRight += 1;
+    //     } 
+    // }
