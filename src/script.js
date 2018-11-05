@@ -1,144 +1,99 @@
-    let newGame;
-    let newCandidate;
-    let newQuestion;
-    let playerOnePoints = 0;
-    let playerTwoPoints = 0;
-    let playerOneScore = $(".scoreOne").html(playerOnePoints);
-    let playerTwoScore = $(".scoreTwo").html(playerTwoPoints);
+    let newGame;  //global variable to be able to call the methods under Game class
+    let newCandidate;  //global variable to be able to call the methods under Candidates class
+    let newQuestion;   //global variable to be able to call the methods under Questions class
+    let playerOnePoints = 0;  //global variable to store candidate1 points
+    let playerTwoPoints = 0;   //global variable to store candidate2 points
+    
 
-class Game {
-    constructor(){
-        this.winner;
+class Game {   //class that holds all methods to Game class
+        constructor(){
+        this.questionIndex = 0;
+        this.juniorQuestions = [ {
+                question:"Question: What does HTML stand for?",
+                answer:"Hyper text markup language",
+                optionA:"Hyper typeface main loop",
+                optionB:"Hyped terrain mock language",
+                optionC:"Hyper text markup language",
+                optionD:"Hyper type marked language"
+        },{
+                question:"blahhhhhh?",
+                answer:"yes",
+                optionA:"yes",
+                optionB:"no",
+                optionC:"what",
+                optionD:"blah"
+        }]
+
+        this.randomQuestion = this.juniorQuestions[this.questionIndex].question;
+        this.answerOption1 = this.juniorQuestions[this.questionIndex].optionA;
+        this.answerOption2 = this.juniorQuestions[this.questionIndex].optionB;
+        this.answerOption3 = this.juniorQuestions[this.questionIndex].optionC;
+        this.answerOption4 = this.juniorQuestions[this.questionIndex].optionD;
+        this.theActualAnswer = this.juniorQuestions[this.questionIndex].answer;
+    } //end of Game constructor
+          
+        showScreenTwo(){   //hides everything on screen 1 and shows background of screen 2, after both names have been entered in prompt
+            $("body").toggleClass("screenTwo");  //switches from screen1 background to screen2 background
+            $(".applyButton").hide();   //hides the apply button
+            $(".jobDescription").hide();   //hides the instructions
+    }  // end of showScreenTwo method
+    
+        pickLevel(){   //hides everything on screen 2 and shows background of screen 3, after level is created
+            $("body").toggleClass("screenThree");  //switches from screen2 background to screen3 background
+            $(".playerStats").toggleClass("showNewColor");   //switches CSS on the Player Stats box
+            $(".statsHide").toggleClass("defaultPoints");   //removes default of unhide to show player points
+            $(".defaultPoints").toggleClass("statsShow");
+            $(".defaultStart").removeClass(); //this line and line below combined "show" the Begin Interview button
+            $(".defaultStart").addClass("startQuestions");   //this line and line above combined "show" the Begin Interview button
+    } // end of pickLevel method
+    
+    beginInterview(){    
+            $(".theQuestion").removeClass();
+            $(".theQuestion").addClass("showEverything");
+            $(".theOptions").removeClass();
+            $(".theOptions").addClass("showEverything");
+            $("#beginGame").removeClass();
+            $("#beginGame").addClass("defaultStart")
+    
+            $("#needToToggleQuestions").html(this.randomQuestion);
+    
+        // setTimeout(function() {
+            $(".option1").html(this.answerOption1);
+            $(".option2").html(this.answerOption2);
+            $(".option3").html(this.answerOption3);
+            $(".option4").html(this.answerOption4);
+        // }, 300);
+    } //end of beginInterview method
+    
+    getCorrectAnswer(){   
+            if(this.answerOption1 === this.theActualAnswer){
+                    playerOnePoints += 1;
+    
+            $("#scoreOne").html(playerOnePoints)
+            }
     }
 
-    showScreenTwo(){
-        $("body").toggleClass("screenTwo");
-        $(".applyButton").hide();
-        $(".jobDescription").hide();
-    }
-
-    pickLevel(){
-        $("body").toggleClass("screenThree");
-        $(".playerStats").toggleClass("showNewColor");
-        $(".statsHide").toggleClass("defaultPoints");
-        $(".defaultPoints").toggleClass("statsShow");
-        $(".defaultStart").removeClass();
-        $(".defaultStart").addClass("startQuestions");
-       
-    }
-
-    beginInterview(){
-        newQuestion = new Questions;
-        let selectedLevel = newQuestion.juniorQuestions[0].question; 
-        let answerOption1 = newQuestion.juniorQuestions[0].optionA;
-        let answerOption2 = newQuestion.juniorQuestions[0].optionB;
-        let answerOption3 = newQuestion.juniorQuestions[0].optionC;
-        let answerOption4 = newQuestion.juniorQuestions[0].optionD;
-        let theActualAnswer = newQuestion.juniorQuestions[0].answer;
+    // displayQuestion(){
+    //     this.juniorQuestions[this.questionIndex];
+    // }
         
-        // console.log("here" + theActualAnswer);
-        // console.log("now" + playerOneScore);
-        // console.log("what" + playerTwoScore);
-        // console.log($(".scoreOne").html);
-        // console.log($(".scoreTwo").html);
-
-        $(".theQuestion").removeClass();
-        $(".theQuestion").addClass("showEverything");
-        $(".theOptions").removeClass();
-        $(".theOptions").addClass("showEverything");
-
-        $("#needToToggleQuestions").html(selectedLevel);
-
-        setTimeout(function() {
-            $(".option1").html(answerOption1);
-            $(".option2").html(answerOption2);
-            $(".option3").html(answerOption3);
-            $(".option4").html(answerOption4);
-          }, 100);
-        }
-
-        getCorrectAnswerA(){
-            if(this.answerOption1 === this.theActualAnswer){
-                playerOnePoints += 1;
-                console.log("points" + playerOnePoints);
-                console.log("score" + playerOneScore);
-            }
-        }
+};  // end of Game class
     
-        getCorrectAnswerB(){
-            if(this.answerOption1 === this.theActualAnswer){
-                playerOnePoints += 1;
-                console.log("points" + playerOnePoints);
-                console.log("score" + playerOneScore);
-            }
-        }
-    
-        getCorrectAnswerC(){
-            if(this.answerOption1 === this.theActualAnswer){
-               playerOnePoints += 1;
-               console.log("points" + playerOnePoints);
-               console.log("score" + playerOneScore);
-        }}
-    
-        getCorrectAnswerD(){
-            if(this.answerOption1 === this.theActualAnswer){
-                playerOnePoints += 1;
-                console.log("points" + playerOnePoints);
-                console.log("score" + playerOneScore);
-            }
-        }
-};
-
 class Candidates{
     constructor(){
         this.candidatesName = ["name1", "name2"];
-        // this.candidatesPoints = [0, 0];
-        // this.candidatesSteals = [0, 0];
-        // this.candidatesTotalPoints = [0, 0];
-    }
-        // enterCandidateName(){
-        // console.log("this is running" + this.candidateOne[0].name);
-        // }
-};
-
+        }
+};   // end of Candidates class
+    
 class Questions{
-    constructor(){
-        this.count = 10;
-        // this.counter = setInterval(timer, 1000);
-        this.juniorQuestions = [ {
-            question:"Question: What does HTML stand for?",
-            answer:"Hyper text markup language",
-            optionA:"Hyper typeface main loop",
-            optionB:"Hyped terrain mock language",
-            optionC:"Hyper text markup language",
-            optionD:"Hyper type marked language"
-        },{
-            question:"blahhhhhh?",
-            answer:"yes",
-            optionA:"yes",
-            optionB:"no",
-            optionC:"what",
-            optionD:"blah"
-        },{
-            question:"testtttt?",
-            answer:"what",
-            optionA:"yes",
-            optionB:"no",
-            optionC:"what",
-            optionD:"blah"
-        },{
-            question:"another test?",
-            answer:"blah",
-            optionA:"yes",
-            optionB:"no",
-            optionC:"what",
-            optionD:"blah"
-        }];
-
-    };
-
+        constructor(){
+            this.count = 10;
+            // this.counter = setInterval(timer, 1000);
+        }
     
-} //end of classes & methods
+} //end of Question class
+
+//end of classes/methods
 
 
 
@@ -155,50 +110,3 @@ class Questions{
 
 
 
-    // timerCountDown(){
-    //     this.count -= 1;
-
-    //     if(this.count <= 0){
-    //         clearInterval(this.counter);
-    //         return;
-    //     }
-    // }
-
-
-    // makeQuestionToggle(){
-    //     $(".questionOptions").toggleClass("showQuestions");
-    // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // whenCandidateOneAnswers(){
-    //     let guessedRight = Candidates.candidateOne[0].right;
-    //     let selectedAnswer = ["clicked"];
-    //     let currentQuestion = this.juniorLevel[0].question;
-    
-    //     if(selectedAnswer[0] === questions[0].Answer){
-    //         this.guessedRight += 1;
-    //     } 
-    // }
-
-    // whenCandidateTwoAnswers(){
-    //     let guessedRight = Candidates.candidateTwo[0].right;
-    //     let selectedAnswer = ["clicked"];
-    //     let currentQuestion = this.juniorLevel[0].question;
-    
-    //     if(selectedAnswer[0] === questions[0].Answer){
-    //         this.guessedRight += 1;
-    //     } 
-    // }
