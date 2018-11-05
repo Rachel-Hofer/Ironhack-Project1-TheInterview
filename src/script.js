@@ -1,6 +1,10 @@
     let newGame;
     let newCandidate;
     let newQuestion;
+    let playerOnePoints = 0;
+    let playerTwoPoints = 0;
+    let playerOneScore = $(".scoreOne").html(playerOnePoints);
+    let playerTwoScore = $(".scoreTwo").html(playerTwoPoints);
 
 class Game {
     constructor(){
@@ -31,11 +35,13 @@ class Game {
         let answerOption3 = newQuestion.juniorQuestions[0].optionC;
         let answerOption4 = newQuestion.juniorQuestions[0].optionD;
         let theActualAnswer = newQuestion.juniorQuestions[0].answer;
-        let playerOnePoints = 0;
-        let playerTwoPoints = 0;
-        let playerOneScore = $(".scoreOne").html(playerOnePoints)
-        let playerOneScore = $(".scoreOne").html(playerOnePoints)
         
+        // console.log("here" + theActualAnswer);
+        // console.log("now" + playerOneScore);
+        // console.log("what" + playerTwoScore);
+        // console.log($(".scoreOne").html);
+        // console.log($(".scoreTwo").html);
+
         $(".theQuestion").removeClass();
         $(".theQuestion").addClass("showEverything");
         $(".theOptions").removeClass();
@@ -48,13 +54,39 @@ class Game {
             $(".option2").html(answerOption2);
             $(".option3").html(answerOption3);
             $(".option4").html(answerOption4);
-          }, 3000);
+          }, 100);
+        }
 
-          if($("#answers").click === theActualAnswer){
-
-          }
-
-    }
+        getCorrectAnswerA(){
+            if(this.answerOption1 === this.theActualAnswer){
+                playerOnePoints += 1;
+                console.log("points" + playerOnePoints);
+                console.log("score" + playerOneScore);
+            }
+        }
+    
+        getCorrectAnswerB(){
+            if(this.answerOption1 === this.theActualAnswer){
+                playerOnePoints += 1;
+                console.log("points" + playerOnePoints);
+                console.log("score" + playerOneScore);
+            }
+        }
+    
+        getCorrectAnswerC(){
+            if(this.answerOption1 === this.theActualAnswer){
+               playerOnePoints += 1;
+               console.log("points" + playerOnePoints);
+               console.log("score" + playerOneScore);
+        }}
+    
+        getCorrectAnswerD(){
+            if(this.answerOption1 === this.theActualAnswer){
+                playerOnePoints += 1;
+                console.log("points" + playerOnePoints);
+                console.log("score" + playerOneScore);
+            }
+        }
 };
 
 class Candidates{
@@ -64,10 +96,9 @@ class Candidates{
         // this.candidatesSteals = [0, 0];
         // this.candidatesTotalPoints = [0, 0];
     }
-
-    // enterCandidateName(){
-    //     console.log("this is running" + this.candidateOne[0].name);
-    // }
+        // enterCandidateName(){
+        // console.log("this is running" + this.candidateOne[0].name);
+        // }
 };
 
 class Questions{
@@ -103,8 +134,10 @@ class Questions{
             optionC:"what",
             optionD:"blah"
         }];
+
     };
 
+    
 } //end of classes & methods
 
 

@@ -45,8 +45,12 @@ function clickApply(){
         
         newCandidate.candidatesName[1] = clickTwo;
         console.log(newCandidate.candidatesName); 
-        
     }
-
 }
+    
+
+
+
+
+
 }) //JQuery end wrap
