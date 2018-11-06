@@ -8,22 +8,24 @@
 class Game {   //class that holds all methods to Game class
         constructor(){
         this.questionIndex = 0;
-        this.juniorQuestions = [ {
+        this.juniorQuestions = [ 
+        {
                 question:"Question: What does HTML stand for?",
                 answer:"Hyper text markup language",
                 optionA:"Hyper typeface main loop",
                 optionB:"Hyped terrain mock language",
                 optionC:"Hyper text markup language",
                 optionD:"Hyper type marked language"
-        },{
+        },
+        {
                 question:"blahhhhhh?",
                 answer:"yes",
                 optionA:"yes",
                 optionB:"no",
                 optionC:"what",
                 optionD:"blah"
-        }]
-
+        }
+    ]
         this.randomQuestion = this.juniorQuestions[this.questionIndex].question;
         this.answerOption1 = this.juniorQuestions[this.questionIndex].optionA;
         this.answerOption2 = this.juniorQuestions[this.questionIndex].optionB;
@@ -57,7 +59,7 @@ class Game {   //class that holds all methods to Game class
     
             $("#needToToggleQuestions").html(this.randomQuestion);
     
-        // setTimeout(function() {
+    // setTimeout(function() {
             $(".option1").html(this.answerOption1);
             $(".option2").html(this.answerOption2);
             $(".option3").html(this.answerOption3);
@@ -66,16 +68,20 @@ class Game {   //class that holds all methods to Game class
     } //end of beginInterview method
     
     getCorrectAnswer(){   
-            if(this.answerOption1 === this.theActualAnswer){
-                    playerOnePoints += 1;
+        $(".idForPress").click(function(e){
+          
+
+        if($(this).text() === newGame.theActualAnswer){
+                playerOnePoints += 1;
     
             $("#scoreOne").html(playerOnePoints)
             }
+        });   
     }
 
-    // displayQuestion(){
-    //     this.juniorQuestions[this.questionIndex];
-    // }
+    displayQuestion(){
+        this.juniorQuestions[this.questionIndex];
+    }
         
 };  // end of Game class
     

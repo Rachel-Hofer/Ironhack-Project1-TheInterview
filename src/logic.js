@@ -27,6 +27,7 @@ $(document).ready(function() { //JQuery start wrap\
 
     $("#beginGame").click(function(){
         newGame.beginInterview();
+        newGame.getCorrectAnswer();
 })
 
 
