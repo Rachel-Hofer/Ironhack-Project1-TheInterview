@@ -1,16 +1,13 @@
 
 //start logic here
 $(document).ready(function() { //JQuery start wrap\
-   
+    
     $(".levels").removeClass("active");
+    newGame = new Game;
 
     $(".applyButton").click(function(){
-    newCandidate = new Candidates();
-    clickApply();
-        if(newCandidate.candidatesName.length === 2){
-            newGame = new Game;
-            newQuestion = new Questions;
-        
+    newGame.clickApply();
+        if(newGame.candidatesName.length === 2){
             newGame.showScreenTwo();
             
             $(".job").removeClass("levels");
@@ -27,22 +24,8 @@ $(document).ready(function() { //JQuery start wrap\
 
     $("#beginGame").click(function(){
         newGame.beginInterview();
-        newGame.getCorrectAnswer();
+        newGame.nextPlayer();
+        newGame.whoWon();
 })
-
-
-function clickApply(){
-    let clickOne = prompt("Candidate 1: Please enter your name:");
-    $(".namePromptOne").html("Candidate 1: " + clickOne);
-        newCandidate.candidatesName[0] = clickOne;
-
-    if(newCandidate.candidatesName[0] != null){
-        let clickTwo = prompt("Candidate 2: Please enter your name:");
-        $(".namePromptTwo").html("Candidate 2: " + clickTwo);
-        newCandidate.candidatesName[1] = clickTwo;
-    }
-}
-    
-
 
 }) //JQuery end wrap
