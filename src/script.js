@@ -118,12 +118,13 @@ class Game {   //class that holds all methods to Game class
             $(".playerStats").toggleClass("showNewColor");   //switches CSS on the Player Stats box
             $(".statsHide").toggleClass("defaultPoints");   //removes default of unhide to show player points
             $(".defaultPoints").toggleClass("statsShow");
-            $(".defaultStart").removeClass(); //this line and line below combined "show" the Begin Interview button
-            $(".defaultStart").addClass("startQuestions");   //this line and line above combined "show" the Begin Interview button
+            $("#beginGame").removeClass("defaultStart"); //this line and line below combined "show" the Begin Interview button
+            $("#beginGame").addClass("startQuestions");   //this line and line above combined "show" the Begin Interview button
     } // end of pickLevel method
     
-        beginInterview()
-        {for(let i = 0; i < this.juniorQuestionsOne.length; i++){
+        beginInterview(){
+        $("#beginGame").hide();        
+        for(let i = 0; i < this.juniorQuestionsOne.length; i++){
             let response = window.prompt(this.juniorQuestionsOne[i].prompt);
           
             if(response === this.juniorQuestionsOne[i].answer){
@@ -145,8 +146,8 @@ class Game {   //class that holds all methods to Game class
                 $("#scoreTwo").html(this.playerTwoPoints)
                 alert("That is correct!")
             } else {
-                alert("That is not orrect! Next question.")
-            }
+                alert("That is not correct! Next question.")
+            }   
         }
     }
 

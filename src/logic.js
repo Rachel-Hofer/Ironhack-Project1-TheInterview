@@ -12,6 +12,7 @@ $(document).ready(function() { //JQuery start wrap\
             
             $(".job").removeClass("levels");
             $(".job").addClass("active");
+            $(".gameNameInterview").hide();
     }
 })   // end of "onclick" APPLY button
 

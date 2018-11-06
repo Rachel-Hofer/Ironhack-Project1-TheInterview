@@ -8,10 +8,25 @@ body {
 
 .screenTwo {  /* waiting lobby of office */
     background-image: url("../img/waitingRoom.png");
+    background-repeat: no-repeat;
+    /* background-size: cover; */
 }
 
 .screenThree {  /* inside office at interviewer's desk*/
     background-image: url("../img/interviewer.png");
+}
+
+.gameNameInterview {
+    font-family: 'Calligraffitti';
+    font-size: 127px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+
+.gameNameHide {
+    display: none;
 }
 
 .hideApplyButton { /* hide APPLY button after 2 names are entered into prompt */
@@ -39,7 +54,7 @@ body {
     border: 3px solid white;
     position: relative;
     left: 35%;
-    margin-top: 39%;
+    margin-top: 19%;
 }
 
 .apply {  /* div holding the button - gives it its width */
@@ -81,24 +96,38 @@ ol {   /* default hide for  */
 } 
 
 .playerStats { /* setting for player name in screen 2 (hidden in screen 1) */
-    background-color: #ef5b3e;
+    background-color: #008080;
     color: white;
     font-size: 26px;
     width: 25vw;
     text-align: left;
-    padding-left: 6%;
+    padding-left: 3%;
+    font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace; 
+    line-height: 2;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 25px;
+    margin-left: 11px;
+    border: 3px solid #adebeb;
+    border-radius: 5px;
  }
 
  .showNewColor {  /* setting for player name/points in screen 3 */
-    display: grid; 
     background-color: #6d82ce;
+    position: absolute;
     color: white;
     font-size: 26px;
     width: 25vw;
-    display: flex;
-    flex-direction: column;
     text-align: left;
-    padding-left: 6%;
+    padding-left: 3%;
+    font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace; 
+    line-height: 2;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 25px;
+    margin-left: 11px;
+    border: 3px solid white;
+    border-radius: 5px;
  }
 
 .defaultPoints {  /* default for player points to be hidden */
@@ -123,7 +152,26 @@ opacity: 1.0;
 filter: alpha(opacity=100);
 margin-bottom: 23%;
 padding: 5%;
-border-radius: 25px;
+margin-bottom: 18%;
+padding: 5%;
+border-radius: 10px;
+font-family: 'Calligraffitti';
+font-weight: bold;
+}
+
+.jrLevel {
+    background-color: #cceeff;
+    border: 3px solid #66ccff;
+}
+
+.midLevel {
+    background-color: #99ddff;
+    border: 3px solid #33bbff;
+}
+
+.srLevel {
+    background-color: #66ccff;
+    border: 3px solid #00aaff;
 }
 
 .active {   /* changes level buttons to be seen in screen 2 */
@@ -133,7 +181,9 @@ border-radius: 25px;
     flex-direction: column;
     width: 30vw;
     margin-left: 34%;
-    padding-top: 5%;
+    padding-top: 1%;
+    width: 40vw;
+    margin-left: 28%;
 }
 
 .defaultStart {   /* default for the "Begin Interview" button that later appears in screen 3. dafault is hidden */
@@ -142,12 +192,21 @@ border-radius: 25px;
 
 .startQuestions {   /* changes "Begin Interview" button to show in screen 3 */
     display: flex;
+    position: relative;
     justify-content: center;
     flex-direction: column;
-    font-size: 36px;
-    width: 30vw;
+    width: 17vw;
     margin-left: 34%;
     padding-top: 5%;
+    margin: 0;
+    font-size: 25px;
+    background-color: #ff6666;
+    color: white;
+    padding: 14px;
+    font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+    border: 3px solid white;
+    margin-left: 267px;
+    top: 262px;
 }
 
 .theQuestion {  /* default for questions to be hidden in screen 3 */
