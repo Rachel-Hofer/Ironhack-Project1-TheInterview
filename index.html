@@ -44,7 +44,7 @@
 
 <div class="container-fluid"> <!--start of Bootstrap wrap-->
 
-<div class="playerStats">
+<div id="entirePlayerInfo" class="defaultHide">
     <div class="allOfCandidateOneInfo">
     <div id="aPrompt" class="namePromptOne"> </div>
     <ol class="defaultPoints">
@@ -67,15 +67,18 @@
       <button id="beginGame" class="defaultStart" type="button">Begin Interview</button>
   </div> 
 
+  
+  <div id="entireQuestion">
+  <p id="changeQuestions" class="defaultHide">Question:</p>
 
-  <div id="needToToggleQuestions" class="theQuestion"></div>
+  <p id="defaultLabelInput" class="defaultHide">
+    <label>Answer:</label><input class="userTypes" type="text"><br>
+    <br>
+    <button class="submit" type="submit">Submit</button>
+  </p>
+</div>
 
-  <div id="needToToggleOptions" class="theOptions">
-      <button id="answers" class="option1 idForPress" type="button" value="text"></button>
-      <button id="answers" class="option2 idForPress" type="button" value="text"></button>
-      <button id="answers" class="option3 idForPress" type="button" value="text"></button>
-      <button id="answers" class="option4 idForPress" type="button" value="text"></button>
-  </div>
+
 
 </div> <!--end of background image div-->
 </div> <!--end of Bootstrap wrap-->

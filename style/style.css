@@ -193,34 +193,30 @@ font-weight: bold;
 .startQuestions {   /* changes "Begin Interview" button to show in screen 3 */
     display: flex;
     position: relative;
-    justify-content: center;
-    flex-direction: column;
     width: 17vw;
     margin-left: 34%;
-    padding-top: 5%;
-    margin: 0;
     font-size: 25px;
     background-color: #ff6666;
     color: white;
-    padding: 14px;
     font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
     border: 3px solid white;
     margin-left: 267px;
     top: 262px;
+    padding: 25px; 
+    border-radius: 5px; 
 }
 
-.theQuestion {  /* default for questions to be hidden in screen 3 */
-    display: none;
-}
+/* .theQuestion {  /* default for questions to be hidden in screen 3 */
+    /* display: none;
+} 
 
-.theOptions {  /* default for answers to be hidden in screen 3 */
-    display: none;
-}
+/* .theOptions {  /* default for answers to be hidden in screen 3 */
+    /* display: none;
+} 
 
-.showEverything {  /* reveals question and answers options in screen 3 */
-    display: flex;
-    font-size: 32px;
-}
+/* .showEverything {  /* reveals question and answers options in screen 3 */
+    /*  display: flex; font-size: 32px; */
+
 
 #revealAnswers {   /* not currently being used */
     display: flex;
@@ -231,4 +227,59 @@ font-weight: bold;
     margin-left: 34%;
     padding-top: 5%;
 }
+
+.defaultHide {
+    display: none;
+}
+
+.defaultShow {
+    position: relative;
+    display: flex;
+    font-size: 24px;
+    padding-bottom: 60px;
+    font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+    color: gray;
+}
+
+.defaultShow2 {
+    position: relative;
+    display: flex;
+    font-size: 22px;
+    flex-direction: column;
+    color: gray;
+}
+
+.entireQuestionAdd {
+    position: relative;
+    margin-top: 20;
+    top: 130px;
+    margin-left: 33%;
+    background-color: #ffc34d;
+    width: 35vw;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    padding-left: 45px;
+    padding-right: 45px;
+    border: 7px solid #ffaa00;
+    border-radius: 5px;
+    font-size: 24px;
+}
+
+.submit {
+    width: 15vw;
+    align-self: center;
+    background-color: #ffaa00;
+    border: 3px solid white;
+    color: white;
+    border-radius: 5px;
+    font-family: 'Calligraffitti';
+    padding-top: 10px;
+    font-weight: bolder;
+    font-size: 35px;
+}
+
+.userTypes {
+    border-radius: 5px;
+}
+    
 

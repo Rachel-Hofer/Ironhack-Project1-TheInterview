@@ -5,98 +5,93 @@ class Game {   //class that holds all methods to Game class
     this.candidatesName = ["name1", "name2"];
     this.playerOnePoints = 0;
     this.playerTwoPoints = 0;
+    this.nextIndex = 0;
     this.juniorQuestionsOne = 
         [
     {
-        prompt: "Question: What does HTML stand for??\n (a) Hyper type marked language\n (b) Hyper text markup language\n (c) Hyped terrain mock language\n (d) Hyper typeface main loop",
+        qa: "Question 1: What does HTML stand for?<br>(a) Hyper type marked language<br> (b) Hyper text markup language<br> (c) Hyped terrain mock language<br> (d) Hyper typeface main loop",
         answer: "b"
     },
     {
-        prompt: "Question: What does CSS stand for?\n (a) Cascading Style Sheet\n (b) Complex Style Syntax\n (c) Complete Sound Sheet\n (d) Comparison Sound Sheet",
+        qa: "Question 1: What does CSS stand for?<br> (a) Cascading Style Sheet<br> (b) Complex Style Syntax<br> (c) Complete Sound Sheet<br> (d) Comparison Sound Sheet",
         answer: "a"
     },
     {
-        prompt: "Question: Which is the correct CSS syntax?\n (a) Body{color: black}\n (b) {body;color:black}\n (c) {body:color=black(body}\n (d) body:color=black",
+        qa: "Question 2: Which is the correct CSS syntax?<br> (a) Body{color: black}<br> (b) {body;color:black}<br> (c) {body:color=black(body}<br> (d) body:color=black",
         answer: "a"
     },
     {
-        prompt: "Margin-top and margin-bottom do not have an effect on an inline element?\n (a) True\n (b) False\n",
+        qa: "Question 2: Margin-top and margin-bottom do not have an effect on an inline element?<br> (a) True<br> (b) False",
         answer: "b"
     },
     {
-        prompt: "Next Question?\n (a) Body{color: black}\n (b) {body;color:black}\n (c) {body:color=black(body}\n (d) body:color=black",
-        answer: "a"
-    },
-    {
-        prompt: "Next Question?\n (a) Cascading Style Sheet\n (b) Complex Style Syntax\n (c) Complete Sound Sheet\n (d) Comparison Sound Sheet",
+        qa: "Question 3: Insert Question?<br> (a) option 1<br> (b) Option 2<br> (c) Option 3<br> (d) Option 4",
         answer: "b"
     },
     {
-        prompt: "Next Question?\n (a) Cascading Style Sheet\n (b) Complex Style Syntax\n (c) Complete Sound Sheet\n (d) Comparison Sound Sheet",
-        answer: "d"
-    },
-    {
-        prompt: "Next Question?\n (a) Body{color: black}\n (b) {body;color:black}\n (c) {body:color=black(body}\n (d) body:color=black",
+        qa: "Question 3: Insert Question?<br> (a) option 1<br> (b) Option 2<br> (c) Option 3<br> (d) Option 4",
         answer: "a"
     },
     {
-        prompt: "Next Question?\n (a) Body{color: black}\n (b) {body;color:black}\n (c) {body:color=black(body}\n (d) body:color=black",
+        qa: "Question 4: Insert Question?<br> (a) option 1<br> (b) Option 2<br> (c) Option 3<br> (d) Option 4",
+        answer: "a"
+    },
+    {
+        qa: "Question 4: Insert Question?<br> (a) option 1<br> (b) Option 2<br> (c) Option 3<br> (d) Option 4",
+        answer: "b"
+    },
+    {
+        qa: "Question 5: Insert Question?<br> (a) option 1<br> (b) Option 2<br> (c) Option 3<br> (d) Option 4",
         answer: "c"
     },
     {
-        prompt: "Next Question\n (a) Body{color: black}\n (b) {body;color:black}\n (c) {body:color=black(body}\n (d) body:color=black",
+        qa: "Question 5: Insert Question?<br> (a) option 1<br> (b) Option 2<br> (c) Option 3<br> (d) Option 4",
         answer: "c"
-    }
-        ];
-
-    this.juniorQuestionsTwo = 
-        [
+    },
     {
-        prompt: "Question: Which is the correct CSS syntax?\n (a) Body{color: black}\n (b) {body;color:black}\n (c) {body:color=black(body}\n (d) body:color=black",
+        qa: "Question 6: Insert Question?<br> (a) option 1<br> (b) Option 2<br> (c) Option 3<br> (d) Option 4",
         answer: "a"
     },
     {
-        prompt: "Question: What does HTML stand for??\n (a) Hyper type marked language\n (b) Hyper text markup language\n (c) Hyped terrain mock language\n (d) Hyper typeface main loop",
+        qa: "Question 6: Insert Question?<br> (a) option 1<br> (b) Option 2<br> (c) Option 3<br> (d) Option 4",
         answer: "b"
     },
     {
-        prompt: "Question: What does CSS stand for?\n (a) Cascading Style Sheet\n (b) Complex Style Syntax\n (c) Complete Sound Sheet\n (d) Comparison Sound Sheet",
+        qa: "Question 7: Insert Question?<br> (a) option 1<br> (b) Option 2<br> (c) Option 3<br> (d) Option 4",
         answer: "a"
     },
     {
-        prompt: "Question: Which is the correct CSS syntax?\n (a) Body{color: black}\n (b) {body;color:black}\n (c) {body:color=black(body}\n (d) body:color=black",
+        qa: "Question 7: Insert Question?<br> (a) option 1<br> (b) Option 2<br> (c) Option 3<br> (d) Option 4",
         answer: "a"
     },
     {
-        prompt: "Margin-top and margin-bottom do not have an effect on an inline element?\n (a) True\n (b) False\n",
+        qa: "Question 8: Insert Question?<br> (a) option 1<br> (b) Option 2<br> (c) Option 3<br> (d) Option 4",
         answer: "b"
     },
     {
-        prompt: "Next Question?\n (a) Body{color: black}\n (b) {body;color:black}\n (c) {body:color=black(body}\n (d) body:color=black",
+        qa: "Question 8: Insert Question?<br> (a) option 1<br> (b) Option 2<br> (c) Option 3<br> (d) Option 4",
         answer: "a"
     },
     {
-        prompt: "Next Question?\n (a) Cascading Style Sheet\n (b) Complex Style Syntax\n (c) Complete Sound Sheet\n (d) Comparison Sound Sheet",
+        qa: "Question 9: Insert Question?<br> (a) option 1<br> (b) Option 2<br> (c) Option 3<br> (d) Option 4",
         answer: "b"
     },
     {
-        prompt: "Next Question?\n (a) Cascading Style Sheet\n (b) Complex Style Syntax\n (c) Complete Sound Sheet\n (d) Comparison Sound Sheet",
+        qa: "Question 9: Insert Question?<br> (a) option 1<br> (b) Option 2<br> (c) Option 3<br> (d) Option 4",
         answer: "d"
     },
     {
-        prompt: "Next Question?\n (a) Body{color: black}\n (b) {body;color:black}\n (c) {body:color=black(body}\n (d) body:color=black",
+        qa: "Question 10: Insert Question?<br> (a) option 1<br> (b) Option 2<br> (c) Option 3<br> (d) Option 4",
         answer: "a"
     },
     {
-        prompt: "Next Question?\n (a) Body{color: black}\n (b) {body;color:black}\n (c) {body:color=black(body}\n (d) body:color=black",
+        qa: "Question 10: Insert Question?<br> (a) option 1<br> (b) Option 2<br> (c) Option 3<br> (d) Option 4",
         answer: "c"
     }
         ];
     } //end of Game constructor
           
         clickApply(){
-            // newGame = new Game();
-
             let clickOne = prompt("Candidate 1: Please enter your name:");
             $(".namePromptOne").html("Candidate 1: " + clickOne);
             this.candidatesName[0] = clickOne;
@@ -109,6 +104,8 @@ class Game {   //class that holds all methods to Game class
     }
         showScreenTwo(){   //hides everything on screen 1 and shows background of screen 2, after both names have been entered in prompt
             $("body").toggleClass("screenTwo");  //switches from screen1 background to screen2 background
+            $("#entirePlayerInfo").removeClass("defaultHide");
+            $("#entirePlayerInfo").addClass("playerStats");
             $(".applyButton").hide();   //hides the apply button
             $(".jobDescription").hide();   //hides the instructions
     }  // end of showScreenTwo method
@@ -122,49 +119,47 @@ class Game {   //class that holds all methods to Game class
             $("#beginGame").addClass("startQuestions");   //this line and line above combined "show" the Begin Interview button
     } // end of pickLevel method
     
-        beginInterview(){
-        $("#beginGame").hide();        
-        for(let i = 0; i < this.juniorQuestionsOne.length; i++){
-            let response = window.prompt(this.juniorQuestionsOne[i].prompt);
-          
-            if(response === this.juniorQuestionsOne[i].answer){
-                this.playerOnePoints += 1;
-                $("#scoreOne").html(this.playerOnePoints)
-                alert("That is correct!")
-            } else {
-                alert("That is not orrect! Next question.")
-            }
-        }
+        beginInterview(){        
+            let theQuestion = this.juniorQuestionsOne[this.nextIndex].qa;
+            $("#changeQuestions").html(theQuestion)  
+    }            
+
+        CandidateTwoTurn(){    
+        this.nextIndex +=1    
+        let theQuestion = this.juniorQuestionsOne[this.nextIndex].qa;
+        let theAnswer = this.juniorQuestionsOne[this.nextIndex].answer;
+        $("#changeQuestions").html(theQuestion)  
     }
 
-        nextPlayer()
-        {for(let i = 0; i < this.juniorQuestionsTwo.length; i++){
-            let response = window.prompt(this.juniorQuestionsTwo[i].prompt);
+    //     nextPlayer(){
+    //         for(let i = 0; i < this.juniorQuestionsTwo.length; i++){
+    //         let response = window.prompt(this.juniorQuestionsTwo[i].prompt);
           
-            if(response === this.juniorQuestionsTwo[i].answer){
-                this.playerTwoPoints += 1;
-                $("#scoreTwo").html(this.playerTwoPoints)
-                alert("That is correct!")
-            } else {
-                alert("That is not correct! Next question.")
-            }   
-        }
-    }
+    //         if(response === this.juniorQuestionsTwo[i].answer){
+    //             this.playerTwoPoints += 1;
+    //             $("#scoreTwo").html(this.playerTwoPoints)
+    //             alert("That is correct!")
+    //         } else {
+    //             alert("That is not correct! Next question.")
+    //         }   
+    //     }
+    // }
 
-        whoWon(){
-            if(this.playerOnePoints > this.playerTwoPoints){
-                alert("Candidate 1: Congratulations, we would like to offer you the job.")
-            }
-            if(this.playerOnePoints < this.playerTwoPoints){
-                alert("Candidate 2: Congratulations, we would like to offer you the job.")
-            }
-            if(this.playerOnePoints === this.playerTwoPoints){
-                alert("Thank you for coming in for the interview. Unfortunately, it was a tie, therefore we will not be offering either of you the job.")
-            }
-        }
-};  // end of Game class
+    //     whoWon(){
+    //         if(this.playerOnePoints > this.playerTwoPoints){
+    //             alert("Candidate 1: Congratulations, we would like to offer you the job.")
+    //         }
+    //         if(this.playerOnePoints < this.playerTwoPoints){
+    //             alert("Candidate 2: Congratulations, we would like to offer you the job.")
+    //         }
+    //         if(this.playerOnePoints === this.playerTwoPoints){
+    //             alert("Thank you for coming in for the interview. Unfortunately, it was a tie, therefore we will not be offering either of you the job.")
+    //         }
+        // }
+    };  // end of Game class
     
 //end of classes/methods
+
 
 
 
