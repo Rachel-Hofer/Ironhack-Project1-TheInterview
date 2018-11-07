@@ -154,6 +154,8 @@ class Game {
     let theQuestion = this.juniorQuestionsOne[this.nextIndex].qa;
     let theAnswer = this.juniorQuestionsOne[this.nextIndex].answer;
     $("#changeQuestions").html(theQuestion);
+
+
   }}
 
 } // end of Game class

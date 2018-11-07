@@ -39,6 +39,7 @@ $(document).ready(function() {
       let theAnswer = newGame.juniorQuestionsOne[newGame.nextIndex].answer;
       let theQuestion = newGame.juniorQuestionsOne[newGame.nextIndex].answer;
       let theInput = $(".userTypes").val();
+      console.log(theInput)
             // if any answer is correct  pass to the next ifStatement
         if(theAnswer === theInput) { 
             document.getElementById("playCorrect").play();
@@ -51,6 +52,7 @@ $(document).ready(function() {
             // and player two equal to true
           newGame.playerTwoTurn = true;
             // change player one score base on player one points
+         
           $("#scoreOne").html(newGame.playerOnePoints);
   
           alert(
@@ -62,6 +64,8 @@ $(document).ready(function() {
           );
             // increase the question
             newGame.increaseQuestion();
+            $(".userTypes").val(' ');
+            console.log(theInput)
 
         } else if (
             // if it is not player one's turn and it is player two's turn
@@ -82,9 +86,11 @@ $(document).ready(function() {
               newGame.candidatesName[0] +
               " your turn."
           );
-            newGame.increaseQuestion();
+          newGame.increaseQuestion();
+          $(".userTypes").val(' ');
+            console.log(theInput)
         }
-            // checks if the answer is not correct
+            // this else check if the answer is not correct
       } else {
         document.getElementById("playIncorrect").play();
         if (newGame.playerOneTurn === true && newGame.playerTwoTurn === false) {
@@ -92,12 +98,16 @@ $(document).ready(function() {
             newGame.playerOneTurn = false;
             newGame.playerTwoTurn = true;
             newGame.increaseQuestion();
+            $(".userTypes").val(' ');
+            console.log(theInput)
 
         } else if (newGame.playerOneTurn === false && newGame.playerTwoTurn === true){
             alert("That is not correct. " + newGame.candidatesName[0] + ", your turn.");
             newGame.playerOneTurn = true;
             newGame.playerTwoTurn = false;
             newGame.increaseQuestion();
+            $(".userTypes").val(' ');
+            console.log(theInput)
         };
 
         }    
@@ -107,7 +117,7 @@ $(document).ready(function() {
         }   
         else if(newGame.nextIndex === newGame.juniorQuestionsOne.length && newGame.playerOnePoints < newGame.playerTwoPoints){
         alert("Congratulations " + newGame.candidatesName[1] + " We would like to offer you the job.")
-        document.getElementById("crowdCheer").play();
+        
         };
     })
 
