@@ -22,7 +22,7 @@ class Game {
       },
       {
         qa:
-          "Question 2: Which is the correct CSS syntax?<br> (a) Body{color: black}<br> (b) {body;color:black}<br> (c) {body:color=black(body}<br> (d) body:color=black",
+          "Question 2: Insert Question?<br> (a) option 1<br> (b) Option 2<br> (c) Option 3<br> (d) Option 4",
         answer: "a"
       },
       {
@@ -150,10 +150,11 @@ class Game {
 
   increaseQuestion() {
     this.nextIndex += 1;
+    if (this.nextIndex !== this.juniorQuestionsOne.length)  {
     let theQuestion = this.juniorQuestionsOne[this.nextIndex].qa;
     let theAnswer = this.juniorQuestionsOne[this.nextIndex].answer;
     $("#changeQuestions").html(theQuestion);
-  }
+  }}
 
 } // end of Game class
 

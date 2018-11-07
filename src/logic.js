@@ -91,19 +91,21 @@ $(document).ready(function() {
           newGame.playerOneTurn = false;
           newGame.playerTwoTurn = true;
           newGame.increaseQuestion();
-        } else if (
-          newGame.playerOneTurn === false &&
-          newGame.playerTwoTurn === true
-        ){
-          alert("That is not correct. " + newGame.candidatesName[0] + ", your turn.");
-          newGame.playerOneTurn = true;
-          newGame.playerTwoTurn = false;
-          newGame.increaseQuestion();
-        } else if(newGame.nextIndex === newGame.juniorQuestionsOne.length && newGame.playerOnePoints > newGame.playerTwoPoints){
-            alert("Congratulations " + newGame.candidatesName[0] + " We would like to offer you the job.")
-        } else if(newGame.nextIndex === newGame.juniorQuestionsOne.length && newGame.playerOnePoints < newGame.playerTwoPoints){
-            alert("Congratulations " + newGame.candidatesName[1] + " We would like to offer you the job.")
+        } else if (newGame.playerOneTurn === false && newGame.playerTwoTurn === true){
+            alert("That is not correct. " + newGame.candidatesName[0] + ", your turn.");
+            newGame.playerOneTurn = true;
+            newGame.playerTwoTurn = false;
+            newGame.increaseQuestion();
+        // } if(newGame.nextIndex === newGame.juniorQuestionsOne.length && newGame.playerOnePoints > newGame.playerTwoPoints){
+        //     alert("Congratulations " + newGame.candidatesName[0] + " We would like to offer you the job.")
+        // } else if(newGame.nextIndex === newGame.juniorQuestionsOne.length && newGame.playerOnePoints < newGame.playerTwoPoints){
+        //     alert("Congratulations " + newGame.candidatesName[1] + " We would like to offer you the job.")
         };
-    }
+        }    
+        if(newGame.nextIndex === newGame.juniorQuestionsOne.length && newGame.playerOnePoints > newGame.playerTwoPoints){
+        alert("Congratulations " + newGame.candidatesName[0] + " We would like to offer you the job.")
+        }   else if(newGame.nextIndex === newGame.juniorQuestionsOne.length && newGame.playerOnePoints < newGame.playerTwoPoints){
+        alert("Congratulations " + newGame.candidatesName[1] + " We would like to offer you the job.")
+    };
+    })
   })
-})
