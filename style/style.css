@@ -138,7 +138,7 @@ ol {   /* default hide for  */
     display: flex;
 }
 
-.levels {  /* default for level buttons on screen 2 when no hover */
+.levels {  
     display: none;
 }
 
