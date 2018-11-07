@@ -132,3 +132,30 @@
 // <!-- <footer>
 //   <p id="progress">Question x of y</p>
 // </footer> -->
+
+
+  //     nextPlayer(){
+  //         for(let i = 0; i < this.juniorQuestionsTwo.length; i++){
+  //         let response = window.prompt(this.juniorQuestionsTwo[i].prompt);
+
+  //         if(response === this.juniorQuestionsTwo[i].answer){
+  //             this.playerTwoPoints += 1;
+  //             $("#scoreTwo").html(this.playerTwoPoints)
+  //             alert("That is correct!")
+  //         } else {
+  //             alert("That is not correct! Next question.")
+  //         }
+  //     }
+  // }
+
+  //     whoWon(){
+  //         if(this.playerOnePoints > this.playerTwoPoints){
+  //             alert("Candidate 1: Congratulations, we would like to offer you the job.")
+  //         }
+  //         if(this.playerOnePoints < this.playerTwoPoints){
+  //             alert("Candidate 2: Congratulations, we would like to offer you the job.")
+  //         }
+  //         if(this.playerOnePoints === this.playerTwoPoints){
+  //             alert("Thank you for coming in for the interview. Unfortunately, it was a tie, therefore we will not be offering either of you the job.")
+  //         }
+  // }
