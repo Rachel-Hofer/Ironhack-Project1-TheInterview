@@ -281,5 +281,19 @@ font-weight: bold;
 .userTypes {
     border-radius: 5px;
 }
+
+
+#beginGame:hover {
+    opacity: .5;
+    filter: alpha(opacity=50);
+}
+
+.submit:hover {
+    opacity: .5;
+    filter: alpha(opacity=50);
+}
     
+audio { 
+    display:none;
+ }
 

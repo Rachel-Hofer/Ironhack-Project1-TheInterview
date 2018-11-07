@@ -22,92 +22,92 @@ class Game {
       },
       {
         qa:
-          "Question 2: Insert Question?<br> (a) option 1<br> (b) Option 2<br> (c) Option 3<br> (d) Option 4",
-        answer: "a"
-      },
-      {
-        qa:
-          "Question 2: Margin-top and margin-bottom do not have an effect on an inline element?<br> (a) True<br> (b) False",
+          "Question 2: JavaScript variables can only hold string data.<br> (a) True<br> (b) False",
         answer: "b"
       },
       {
         qa:
-          "Question 3: Insert Question?<br> (a) option 1<br> (b) Option 2<br> (c) Option 3<br> (d) Option 4",
+          "Question 2: JavaScript properties are the variables that makes up an object.<br> (a) True<br> (b) False",
+        answer: "a"
+      },
+      {
+        qa:
+          "Question 3: CSS Margin-top and margin-bottom do not have an effect on an inline element.<br> (a) True<br> (b) False",
         answer: "b"
       },
       {
         qa:
-          "Question 3: Insert Question?<br> (a) option 1<br> (b) Option 2<br> (c) Option 3<br> (d) Option 4",
-        answer: "a"
-      },
-      {
-        qa:
-          "Question 4: Insert Question?<br> (a) option 1<br> (b) Option 2<br> (c) Option 3<br> (d) Option 4",
-        answer: "a"
-      },
-      {
-        qa:
-          "Question 4: Insert Question?<br> (a) option 1<br> (b) Option 2<br> (c) Option 3<br> (d) Option 4",
+          "Question 3: Javascript function is a method that falls inside a class.<br> (a) True<br> (b) False",
         answer: "b"
       },
       {
         qa:
-          "Question 5: Insert Question?<br> (a) option 1<br> (b) Option 2<br> (c) Option 3<br> (d) Option 4",
-        answer: "c"
-      },
-      {
-        qa:
-          "Question 5: Insert Question?<br> (a) option 1<br> (b) Option 2<br> (c) Option 3<br> (d) Option 4",
-        answer: "c"
-      },
-      {
-        qa:
-          "Question 6: Insert Question?<br> (a) option 1<br> (b) Option 2<br> (c) Option 3<br> (d) Option 4",
-        answer: "a"
-      },
-      {
-        qa:
-          "Question 6: Insert Question?<br> (a) option 1<br> (b) Option 2<br> (c) Option 3<br> (d) Option 4",
-        answer: "b"
-      },
-      {
-        qa:
-          "Question 7: Insert Question?<br> (a) option 1<br> (b) Option 2<br> (c) Option 3<br> (d) Option 4",
-        answer: "a"
-      },
-      {
-        qa:
-          "Question 7: Insert Question?<br> (a) option 1<br> (b) Option 2<br> (c) Option 3<br> (d) Option 4",
-        answer: "a"
-      },
-      {
-        qa:
-          "Question 8: Insert Question?<br> (a) option 1<br> (b) Option 2<br> (c) Option 3<br> (d) Option 4",
-        answer: "b"
-      },
-      {
-        qa:
-          "Question 8: Insert Question?<br> (a) option 1<br> (b) Option 2<br> (c) Option 3<br> (d) Option 4",
-        answer: "a"
-      },
-      {
-        qa:
-          "Question 9: Insert Question?<br> (a) option 1<br> (b) Option 2<br> (c) Option 3<br> (d) Option 4",
-        answer: "b"
-      },
-      {
-        qa:
-          "Question 9: Insert Question?<br> (a) option 1<br> (b) Option 2<br> (c) Option 3<br> (d) Option 4",
+          "Question 4: What values can an array hold?<br> (a) Numbers<br> (b) String<br> (c) Boolean<br> (d) All of hte above",
         answer: "d"
       },
       {
         qa:
-          "Question 10: Insert Question?<br> (a) option 1<br> (b) Option 2<br> (c) Option 3<br> (d) Option 4",
+          "Question 4: A number cannot be a string.<br> (a) True<br> (b) False",
+        answer: "b"
+      },
+      {
+        qa:
+          "Question 5: What is a Boolean?<br> (a) X/Y<br> (b) Yes/No<br> (c) True/False<br> (d) Number",
+        answer: "c"
+      },
+      {
+        qa:
+          "Question 5: JavaScript- var, let and const all accomplish the same task.<br> (a) True<br> (b) False",
+        answer: "b"
+      },
+      {
+        qa:
+          "Question 6: How do you create a comment in Javascript?<br> (a) //<br> (b) !- -!<br> (c) /* */<br> (d) **",
         answer: "a"
       },
       {
         qa:
-          "Question 10: Insert Question?<br> (a) option 1<br> (b) Option 2<br> (c) Option 3<br> (d) Option 4",
+          "Question 6: How is an HTML id called in CSS?<br> (a) .<br> (b) !<br> (c) <><br> (d) #",
+        answer: "d"
+      },
+      {
+        qa:
+          "Question 7: CSS- what position does 20px represent in the following syntax: #box- margin: 10px 5px 20px 25px?<br> (a) left<br> (b) right<br> (c) above<br> (d) below",
+        answer: "d"
+      },
+      {
+        qa:
+          "Question 7: What is the correct structure of a for loop?<br> (a) for(condition; finalExpression; initialization)<br> (b) for(Expression; condition; finalExpression)<br> (c) for(initialization; condition; finalExpression)<br> (d) None of these",
+        answer: "c"
+      },
+      {
+        qa:
+          "Question 8: What is the first line of an HTML5 file?<br> (a) document.ready()<br> (b)!DOCTYPE html<br> (c) heading<br> (d) body ",
+        answer: "b"
+      },
+      {
+        qa:
+          "Question 8: Javascript- what does a break statement do?<br> (a) Exits a switch statement or a loop<br> (b) Breaks the code<br> (c) Returns a string<br> (d) None of these",
+        answer: "a"
+      },
+      {
+        qa:
+          "Question 9: Which is an example of camel case?<br> (a) ThisExample<br> (b) thisEXAMPLE<br> (c) thisExample<br> (d) THISexample",
+        answer: "c"
+      },
+      {
+        qa:
+          "Question 9: CSS Box Model- what box is directly after the HTML element?<br> (a) Border<br> (b) Margin<br> (c) Width<br> (d) Padding",
+        answer: "d"
+      },
+      {
+        qa:
+          "Question 10: Javascript- which is not an array method?<br> (a) .map<br> (b) .get<br> (c) .filter<br> (d) .reduce",
+        answer: "b"
+      },
+      {
+        qa:
+          "Question 10: Javascript- what does Math.random() do?<br> (a) Rounds down<br> (b) Adds two numbers<br> (c) Gets a random number between 0-1<br> (d) Rounds up",
         answer: "c"
       }
     ];

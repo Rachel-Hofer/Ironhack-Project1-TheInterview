@@ -39,15 +39,15 @@ $(document).ready(function() {
       let theAnswer = newGame.juniorQuestionsOne[newGame.nextIndex].answer;
       let theQuestion = newGame.juniorQuestionsOne[newGame.nextIndex].answer;
       let theInput = $(".userTypes").val();
-      console.log("answer " + theAnswer);
-      console.log("input " + theInput);
+     
             // if any answer is correct  pass to the next ifStatement
-        if(theAnswer === theInput) {
+        if(theAnswer === theInput) { 
+            document.getElementById("playCorrect").play();
             // if is player one turn and not player two
         if(newGame.playerOneTurn === true && newGame.playerTwoTurn === false) {
-            // increse player one point
+            // increase player one points
           newGame.playerOnePoints += 1;
-            // set player one turn equal to false  and player two equal to true
+            // set player one to false  and player two to true
           newGame.playerOneTurn = false;
             // and player two equal to true
           newGame.playerTwoTurn = true;
@@ -62,7 +62,8 @@ $(document).ready(function() {
               " your turn."
           );
             // increase the question
-          newGame.increaseQuestion();
+            newGame.increaseQuestion();
+
         } else if (
             // if it is not player one's turn and it is player two's turn
           newGame.playerOneTurn === false &&
@@ -82,30 +83,31 @@ $(document).ready(function() {
               newGame.candidatesName[0] +
               " your turn."
           );
-          newGame.increaseQuestion();
+            newGame.increaseQuestion();
         }
             // this else check if the answer is not correct
       } else {
+        document.getElementById("playIncorrect").play();
         if (newGame.playerOneTurn === true && newGame.playerTwoTurn === false) {
           alert("That is not correct. " + newGame.candidatesName[1] + ", your turn.");
-          newGame.playerOneTurn = false;
-          newGame.playerTwoTurn = true;
-          newGame.increaseQuestion();
+            newGame.playerOneTurn = false;
+            newGame.playerTwoTurn = true;
+            newGame.increaseQuestion();
+
         } else if (newGame.playerOneTurn === false && newGame.playerTwoTurn === true){
             alert("That is not correct. " + newGame.candidatesName[0] + ", your turn.");
             newGame.playerOneTurn = true;
             newGame.playerTwoTurn = false;
             newGame.increaseQuestion();
-        // } if(newGame.nextIndex === newGame.juniorQuestionsOne.length && newGame.playerOnePoints > newGame.playerTwoPoints){
-        //     alert("Congratulations " + newGame.candidatesName[0] + " We would like to offer you the job.")
-        // } else if(newGame.nextIndex === newGame.juniorQuestionsOne.length && newGame.playerOnePoints < newGame.playerTwoPoints){
-        //     alert("Congratulations " + newGame.candidatesName[1] + " We would like to offer you the job.")
         };
+
         }    
         if(newGame.nextIndex === newGame.juniorQuestionsOne.length && newGame.playerOnePoints > newGame.playerTwoPoints){
         alert("Congratulations " + newGame.candidatesName[0] + " We would like to offer you the job.")
-        }   else if(newGame.nextIndex === newGame.juniorQuestionsOne.length && newGame.playerOnePoints < newGame.playerTwoPoints){
+        }   
+        else if(newGame.nextIndex === newGame.juniorQuestionsOne.length && newGame.playerOnePoints < newGame.playerTwoPoints){
         alert("Congratulations " + newGame.candidatesName[1] + " We would like to offer you the job.")
-    };
+        };
     })
-  })
+
+  }) //end of document.ready
