@@ -39,7 +39,6 @@ $(document).ready(function() {
       let theAnswer = newGame.juniorQuestionsOne[newGame.nextIndex].answer;
       let theQuestion = newGame.juniorQuestionsOne[newGame.nextIndex].answer;
       let theInput = $(".userTypes").val();
-     
             // if any answer is correct  pass to the next ifStatement
         if(theAnswer === theInput) { 
             document.getElementById("playCorrect").play();
@@ -85,7 +84,7 @@ $(document).ready(function() {
           );
             newGame.increaseQuestion();
         }
-            // this else check if the answer is not correct
+            // checks if the answer is not correct
       } else {
         document.getElementById("playIncorrect").play();
         if (newGame.playerOneTurn === true && newGame.playerTwoTurn === false) {
@@ -104,9 +103,11 @@ $(document).ready(function() {
         }    
         if(newGame.nextIndex === newGame.juniorQuestionsOne.length && newGame.playerOnePoints > newGame.playerTwoPoints){
         alert("Congratulations " + newGame.candidatesName[0] + " We would like to offer you the job.")
+        document.getElementById("crowdCheer").play();
         }   
         else if(newGame.nextIndex === newGame.juniorQuestionsOne.length && newGame.playerOnePoints < newGame.playerTwoPoints){
         alert("Congratulations " + newGame.candidatesName[1] + " We would like to offer you the job.")
+        document.getElementById("crowdCheer").play();
         };
     })
 
