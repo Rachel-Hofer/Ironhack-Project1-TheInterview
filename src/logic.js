@@ -39,7 +39,8 @@ $(document).ready(function() {
       let theAnswer = newGame.juniorQuestionsOne[newGame.nextIndex].answer;
       let theQuestion = newGame.juniorQuestionsOne[newGame.nextIndex].answer;
       let theInput = $(".userTypes").val();
-      console.log(theInput)
+    //   console.log(theInput)
+    //   console.log(newGame.nextIndex)
             // if any answer is correct  pass to the next ifStatement
         if(theAnswer === theInput) { 
             document.getElementById("playCorrect").play();
@@ -64,8 +65,8 @@ $(document).ready(function() {
           );
             // increase the question
             newGame.increaseQuestion();
-            $(".userTypes").val(' ');
-            console.log(theInput)
+            // $(".userTypes").val("");
+            // console.log(theInput)
 
         } else if (
             // if it is not player one's turn and it is player two's turn
@@ -87,8 +88,8 @@ $(document).ready(function() {
               " your turn."
           );
           newGame.increaseQuestion();
-          $(".userTypes").val(' ');
-            console.log(theInput)
+        //   $(".userTypes").val('');
+        //     console.log(theInput)
         }
             // this else check if the answer is not correct
       } else {
@@ -98,16 +99,16 @@ $(document).ready(function() {
             newGame.playerOneTurn = false;
             newGame.playerTwoTurn = true;
             newGame.increaseQuestion();
-            $(".userTypes").val(' ');
-            console.log(theInput)
+            // $(".userTypes").val(' ');
+            // console.log(theInput)
 
         } else if (newGame.playerOneTurn === false && newGame.playerTwoTurn === true){
             alert("That is not correct. " + newGame.candidatesName[0] + ", your turn.");
             newGame.playerOneTurn = true;
             newGame.playerTwoTurn = false;
             newGame.increaseQuestion();
-            $(".userTypes").val(' ');
-            console.log(theInput)
+            // $(".userTypes").val(' ');
+            // console.log(theInput)
         };
 
         }    
