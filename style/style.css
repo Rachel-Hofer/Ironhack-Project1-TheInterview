@@ -2,6 +2,8 @@ body {
     padding: 0;
 }
 
+
+/* background images of all three screens */
 .screenOne  { /* newspaper ad NOW HIRING */
     background-image: url("../img/job\ posting2.png");
 }
@@ -15,8 +17,11 @@ body {
 .screenThree {  /* inside office at interviewer's desk*/
     background-image: url("../img/interviewer.png");
 }
+/* end of background images of all three screens */
 
-.gameNameInterview {  
+
+/* Game title appear/hide*/
+.gameNameInterview {  /* Game title default, hides starting screen 2*/
     font-family: 'Calligraffitti';
     font-size: 127px;
     display: flex;
@@ -25,15 +30,14 @@ body {
     margin-top: 5%;
 }
 
-.gameNameHide {
+.gameNameHide {  /* Game title class that hides title starting screen 2*/
     display: none;
 }
+/* Game title appear/hide ends*/
 
+
+/* Apply button appear/hide*/
 .hideApplyButton { /* hide APPLY button after 2 names are entered into prompt */
-    display: none;
-}
-
-.hideCandidateNames { /* default for player names set at hidden until both prompts are completed */
     display: none;
 }
 
@@ -60,7 +64,10 @@ body {
 .apply {  /* div holding the button - gives it its width */
     width: 100%;
  }
+/* Apply button appear/hide ends*/
 
+
+/* All CSS for Game instructions*/
  .jobDescription {  /* div holding entire job description */
     padding: 3%;
     font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace; 
@@ -94,6 +101,13 @@ body {
 ol {   /* default hide for  */
     list-style: none; 
 } 
+/* All CSS for Game instructions ends*/
+
+
+/* All CSS for Candidate Name/Points*/
+.hideCandidateNames { /* default for player names set at hidden until both prompts are completed */
+    display: none;
+}
 
 .playerStats { /* setting for player name in screen 2 (hidden in screen 1) */
     background-color: #008080;
@@ -137,8 +151,11 @@ ol {   /* default hide for  */
 .statsShow {   /* toggles the player points to be shown */
     display: flex;
 }
+/* All CSS for Candidate Name/Points*/
 
-.levels {  
+
+/* All CSS for levels*/
+.levels {  /* default for levels to be hidden */
     display: none;
 }
 
@@ -185,11 +202,22 @@ font-weight: bold;
     width: 40vw;
     margin-left: 28%;
 }
+/* All CSS for levels ends*/
 
+
+/* CSS for Begin Interview Button*/
 .defaultStart {   /* default for the "Begin Interview" button that later appears in screen 3. dafault is hidden */
     display: none;
 }
 
+#beginGame:hover {
+    opacity: .5;
+    filter: alpha(opacity=50);
+}
+/* CSS for Begin Interview Button ends*/
+
+
+/* all CSS for Questions Div*/
 .startQuestions {   /* changes "Begin Interview" button to show in screen 3 */
     display: flex;
     position: relative;
@@ -204,28 +232,6 @@ font-weight: bold;
     top: 262px;
     padding: 25px; 
     border-radius: 5px; 
-}
-
-/* .theQuestion {  /* default for questions to be hidden in screen 3 */
-    /* display: none;
-} 
-
-/* .theOptions {  /* default for answers to be hidden in screen 3 */
-    /* display: none;
-} 
-
-/* .showEverything {  /* reveals question and answers options in screen 3 */
-    /*  display: flex; font-size: 32px; */
-
-
-#revealAnswers {   /* not currently being used */
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    font-size: 36px;
-    width: 30vw;
-    margin-left: 34%;
-    padding-top: 5%;
 }
 
 .defaultHide {
@@ -265,6 +271,13 @@ font-weight: bold;
     font-size: 24px;
 }
 
+.userTypes {
+    border-radius: 5px;
+}
+/* all CSS for Questions Div ends*/
+
+
+/* all CSS for Submit button inside questions div*/
 .submit {
     width: 15vw;
     align-self: center;
@@ -278,25 +291,20 @@ font-weight: bold;
     font-size: 35px;
 }
 
-.userTypes {
-    border-radius: 5px;
-}
-
-
-#beginGame:hover {
-    opacity: .5;
-    filter: alpha(opacity=50);
-}
-
 .submit:hover {
     opacity: .5;
     filter: alpha(opacity=50);
 }
-    
+/* all CSS for Submit button inside questions div*/   
+
+
+/* hides audio files*/
 audio { 
    display:none;
 }
 
+
+/* styles the okay button of the modal*/
 #modalButton {
     background-color: #6d82ce;
     color: white;

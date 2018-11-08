@@ -1,15 +1,14 @@
 let newGame; //global variable to be able to call the methods under Game class
 
-class Game {
-  //class that holds all methods to Game class
+class Game {  //class that holds all methods to Game class
   constructor() {
-    this.candidatesName = ["name1", "name2"];
-    this.playerOnePoints = 0;
-    this.playerOneTurn = true;
-    this.playerTwoTurn = false;
-    this.playerTwoPoints = 0;
-    this.nextIndex = 0;
-    this.juniorQuestionsOne = [
+    this.candidatesName = ["name1", "name2"];  //array holding Candidate 1 and 2's names
+    this.playerOnePoints = 0;  // number holding Candidate 1's points
+    this.playerOneTurn = true;  // variable to hold boolean for Candidate 1, to alternate turns
+    this.playerTwoTurn = false;  // variable to hold boolean for Candidate 2, to alternate turns
+    this.playerTwoPoints = 0;  // number holding Candidate 1's points
+    this.nextIndex = 0; // variable the holds number for the index of the questions array
+    this.juniorQuestionsOne = [  //array of all questions used in Junior Level
       {
         qa:
           "Question 1: What does HTML stand for?<br>(a) Hyper type marked language<br> (b) Hyper text markup language<br> (c) Hyped terrain mock language<br> (d) Hyper typeface main loop",
@@ -113,17 +112,17 @@ class Game {
     ];
   } //end of Game constructor
 
-  clickApply() {
-    let clickOne = prompt("Candidate 1: Please enter your name:");
-    $(".namePromptOne").html("Candidate 1: " + clickOne);
-    this.candidatesName[0] = clickOne;
+  clickApply() {  // function that activates the prompts for candidates to enter their name
+    let clickOne = prompt("Candidate 1: Please enter your name:");  // first click prompts Candidate 1 name
+    $(".namePromptOne").html("Candidate 1: " + clickOne);  //JQuery to make the input of Candidate 1 name = the HTML for that candidate's name
+    this.candidatesName[0] = clickOne;  // the first object in the candidates Name array is Candidate 1's name
 
-    if (this.candidatesName[0] != null) {
-      let clickTwo = prompt("Candidate 2: Please enter your name:");
-      $(".namePromptTwo").html("Candidate 2: " + clickTwo);
-      this.candidatesName[1] = clickTwo;
+    if (this.candidatesName[0] != null) {  // if object 1 of candidate names array is not empty,
+      let clickTwo = prompt("Candidate 2: Please enter your name:");  // the second click will prompt Candidate 2's name
+      $(".namePromptTwo").html("Candidate 2: " + clickTwo);  //JQuery to make the input of Candidate 2 name = the HTML for that candidate's name
+      this.candidatesName[1] = clickTwo;  // the second object in the candidates Name array is Candidate 1's name
     }
-  }
+  }  // end of clickApply method
 
   showScreenTwo() {   //hides everything on screen 1 and shows background of screen 2, after both names have been entered in prompt
     $("body").toggleClass("screenTwo"); //switches from screen1 background to screen2 background
@@ -142,17 +141,16 @@ class Game {
     $("#beginGame").addClass("startQuestions");  //this line and line above combined "show" the Begin Interview button
   }  // end of pickLevel method
 
-  beginInterview() {
-    let theQuestion = this.juniorQuestionsOne[this.nextIndex].qa;
-    $("#changeQuestions").html(theQuestion);
+  beginInterview() {  // function that starts the interview. Is inserted into the onclick function in logic sheet
+    let theQuestion = this.juniorQuestionsOne[this.nextIndex].qa;  // variable that is equal to the question of the index the gaem is on inside the questions array
+    $("#changeQuestions").html(theQuestion);  // JQuery to make the question = the HTML for the question
   }
 
-  increaseQuestion() {
-    this.nextIndex += 1;
-    if (this.nextIndex !== this.juniorQuestionsOne.length)  {
-    let theQuestion = this.juniorQuestionsOne[this.nextIndex].qa;
-    let theAnswer = this.juniorQuestionsOne[this.nextIndex].answer;
-    $("#changeQuestions").html(theQuestion);
+  increaseQuestion() {  // function that increases the variable next Index after each turn. Is inserted into the onclick function in logic sheet
+    this.nextIndex += 1;  // add 1 to the current index
+    if (this.nextIndex !== this.juniorQuestionsOne.length) {  // if the index is not greater than the length of the question array, 
+    let theQuestion = this.juniorQuestionsOne[this.nextIndex].qa;  // move to the next question (since the index has already been increased) 
+    $("#changeQuestions").html(theQuestion); // JQuery to make the new question = the HTML for the question
 
 
   }}
