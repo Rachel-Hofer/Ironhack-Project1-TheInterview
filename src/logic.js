@@ -114,11 +114,15 @@ $(document).ready(function() { // JQuery start wrap
 
         }    
         if(newGame.nextIndex === newGame.juniorQuestionsOne.length && newGame.playerOnePoints > newGame.playerTwoPoints){
-        alert("Congratulations " + newGame.candidatesName[0] + " We would like to offer you the job.")
+            $(".theWinner").html = newGame.candidatesName[0]
+            $('#winnerModal').modal('show')
+            // alert("Congratulations " + newGame.candidatesName[0] + " We would like to offer you the job.")
         document.getElementById("crowdCheer").play();
         }   
         else if(newGame.nextIndex === newGame.juniorQuestionsOne.length && newGame.playerOnePoints < newGame.playerTwoPoints){
-        alert("Congratulations " + newGame.candidatesName[1] + " We would like to offer you the job.")
+            $(".theWinner").html = newGame.candidatesName[1]
+            $('#winnerModal').modal('show')
+        // alert("Congratulations " + newGame.candidatesName[1] + " We would like to offer you the job.")
         
         };
         $(".userTypes").val("");

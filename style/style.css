@@ -297,7 +297,9 @@ audio {
    display:none;
 }
 
-#wrongModal {
-    display: none;
+#modalButton {
+    background-color: #6d82ce;
+    color: white;
+    border: 2px solid #536cc6;
 }
 
