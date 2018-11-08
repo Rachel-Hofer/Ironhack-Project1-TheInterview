@@ -124,8 +124,8 @@ class Game {
       this.candidatesName[1] = clickTwo;
     }
   }
-  showScreenTwo() {
-    //hides everything on screen 1 and shows background of screen 2, after both names have been entered in prompt
+
+  showScreenTwo() {   //hides everything on screen 1 and shows background of screen 2, after both names have been entered in prompt
     $("body").toggleClass("screenTwo"); //switches from screen1 background to screen2 background
     $("#entirePlayerInfo").removeClass("defaultHide");
     $("#entirePlayerInfo").addClass("playerStats");
@@ -133,15 +133,14 @@ class Game {
     $(".jobDescription").hide(); //hides the instructions
   } // end of showScreenTwo method
 
-  pickLevel() {
-    //hides everything on screen 2 and shows background of screen 3, after level is created
+  pickLevel() {   //hides everything on screen 2 and shows background of screen 3, after level is created
     $("body").toggleClass("screenThree"); //switches from screen2 background to screen3 background
-    $(".playerStats").toggleClass("showNewColor"); //switches CSS on the Player Stats box
-    $(".statsHide").toggleClass("defaultPoints"); //removes default of unhide to show player points
+    $(".playerStats").toggleClass("showNewColor");  //switches CSS on the Player Stats box
+    $(".statsHide").toggleClass("defaultPoints");  //removes default of unhide to show player points
     $(".defaultPoints").toggleClass("statsShow");
-    $("#beginGame").removeClass("defaultStart"); //this line and line below combined "show" the Begin Interview button
-    $("#beginGame").addClass("startQuestions"); //this line and line above combined "show" the Begin Interview button
-  } // end of pickLevel method
+    $("#beginGame").removeClass("defaultStart");  //this line and line below combined "show" the Begin Interview button
+    $("#beginGame").addClass("startQuestions");  //this line and line above combined "show" the Begin Interview button
+  }  // end of pickLevel method
 
   beginInterview() {
     let theQuestion = this.juniorQuestionsOne[this.nextIndex].qa;

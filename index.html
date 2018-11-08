@@ -13,6 +13,7 @@
 
     <!-- JQuery linked -->
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <!-- my JSlinked -->
   <script src="src/script.js"></script>
@@ -25,14 +26,13 @@
 <h1 class="gameNameInterview">The Interview</h1>
 
 
-  <div class="jobDescription">    <!-- redo to make cleaner code -->
+  <div class="jobDescription">    <!-- Instructions to the game -->
       <h3 class="instructions">Job Requirements:</h3>
   
       <p class="topOfInstructions">Two highly-qualified candidates will go head to head in an intense round of interview questions asked by the company's CEO.</p>
         <ol class="directions">
       <li class="requireList">  Each Candidate will have the opportunity to answer 10 questions.</li>
       <li class="requireList">  Correct answers = +1 point</li>
-      <!-- <li class="requireList">  If either Candidate answers incorrectly, the opponent has the opportunity to "steal" the question, giving a correct answer within 5 seconds</li>-->
       <li class="requireList">  Candidates will alternate turns, regardless of a correct/incorrect answer.</li> 
       <li class="requireList">  The interview will come to an end after both candidates answer their 10 questions. The Candidate with the most points will receive a job offer.</li>
     </ol>
@@ -69,12 +69,19 @@
 
   
   <div id="entireQuestion">
-  <p id="changeQuestions" class="defaultHide">Question:</p>
 
+<form id="formQuestions">
+
+  <p id="changeQuestions" class="defaultHide">Question:</p>
+  
   <p id="defaultLabelInput" class="defaultHide">
-    <label>Answer:</label><input class="userTypes" type="text"><br>
+    <label>Answer:</label><input class="userTypes" type="text" autofocus><br>
     <br>
     <button class="submit" type="submit">Submit</button>
+  </form>
+    
+    
+
   </p>
 </div>
 
@@ -83,7 +90,50 @@
 </div> <!--end of background image div-->
 </div> <!--end of Bootstrap wrap-->
 
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
+
+  <div class="modal fade" id="wrongModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            WRONG YOU IDIOT!
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+<!--audio clips-->
 <audio id="playCorrect" src="./audio/soundsilk-Correct-Answer-Soundeffect.mp3"></audio> 
 <audio id="playIncorrect" src="./audio/soundsilk-buzzer-wrong-answer.mp3"></audio>
 <audio id="crowdCheer" src="./audio/5_Sec_Crowd_Cheer-Mike_Koenig-1562033255.mp3"></audio>

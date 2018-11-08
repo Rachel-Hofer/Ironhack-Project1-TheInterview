@@ -1,12 +1,11 @@
 //start logic here
-$(document).ready(function() {
-    //JQuery start wrap\
+$(document).ready(function() { // JQuery start wrap
   
     newGame = new Game();
-  
-    $(".applyButton").click(function() {
-      newGame.clickApply();
-      if (newGame.candidatesName.length === 2) {
+
+    $(".applyButton").click(function() {  // when APPLY is clicked, do the following
+      newGame.clickApply();   // 
+      if(newGame.candidatesName.length === 2) {
         newGame.showScreenTwo();
   
         $("#job").removeClass("levels");
@@ -35,14 +34,15 @@ $(document).ready(function() {
       });
     });
   
-    $(".submit").click(function() {
+    $("#formQuestions").submit(function(e) {
+        e.preventDefault();
       let theAnswer = newGame.juniorQuestionsOne[newGame.nextIndex].answer;
       let theQuestion = newGame.juniorQuestionsOne[newGame.nextIndex].answer;
       let theInput = $(".userTypes").val();
-    //   console.log(theInput)
-    //   console.log(newGame.nextIndex)
+    
             // if any answer is correct  pass to the next ifStatement
         if(theAnswer === theInput) { 
+          
             document.getElementById("playCorrect").play();
             // if is player one turn and not player two
         if(newGame.playerOneTurn === true && newGame.playerTwoTurn === false) {
@@ -55,16 +55,14 @@ $(document).ready(function() {
             // change player one score base on player one points
          
           $("#scoreOne").html(newGame.playerOnePoints);
-  
-          alert(
-            "You are correct! " +
-              newGame.candidatesName[0] +
-              " you get 1 point. " +
-              newGame.candidatesName[1] +
-              " your turn."
-          );
+          $("#exampleModal").modal('toggle');
+            // $("#rightAnswerModal").click(function(){
+            //     $(".modal").toggle();
+            // })
+
             // increase the question
             newGame.increaseQuestion();
+        
             // $(".userTypes").val("");
             // console.log(theInput)
 
@@ -80,22 +78,21 @@ $(document).ready(function() {
           newGame.playerTwoTurn = false;
             // change player one score base on player one points
           $("#scoreTwo").html(newGame.playerTwoPoints);
-          alert(
-            "You are correct! " +
-              newGame.candidatesName[1] +
-              " you get 1 point. " +
-              newGame.candidatesName[0] +
-              " your turn."
-          );
+          $("#exampleModal").modal('toggle');
+
           newGame.increaseQuestion();
         //   $(".userTypes").val('');
         //     console.log(theInput)
         }
             // this else check if the answer is not correct
       } else {
-        document.getElementById("playIncorrect").play();
-        if (newGame.playerOneTurn === true && newGame.playerTwoTurn === false) {
-          alert("That is not correct. " + newGame.candidatesName[1] + ", your turn.");
+        document.getElementById("playIncorrect").play();        
+            if (newGame.playerOneTurn === true && newGame.playerTwoTurn === false) {
+                // $(".modal").show();
+                $('#wrongModal').modal('show')
+
+                // $("#rightAnswerModal").click($(".modal").hide());
+            // alert("That is not correct. " + newGame.candidatesName[1] + ", your turn.");
             newGame.playerOneTurn = false;
             newGame.playerTwoTurn = true;
             newGame.increaseQuestion();
@@ -103,7 +100,11 @@ $(document).ready(function() {
             // console.log(theInput)
 
         } else if (newGame.playerOneTurn === false && newGame.playerTwoTurn === true){
-            alert("That is not correct. " + newGame.candidatesName[0] + ", your turn.");
+
+            $('#wrongModal').modal('show')
+                
+                // $("#rightAnswerModal").click($(".modal").hide());
+            // alert("That is not correct. " + newGame.candidatesName[0] + ", your turn.");
             newGame.playerOneTurn = true;
             newGame.playerTwoTurn = false;
             newGame.increaseQuestion();
@@ -120,6 +121,7 @@ $(document).ready(function() {
         alert("Congratulations " + newGame.candidatesName[1] + " We would like to offer you the job.")
         
         };
+        $(".userTypes").val("");
     })
 
   }) //end of document.ready

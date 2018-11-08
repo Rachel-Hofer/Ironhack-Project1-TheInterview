@@ -16,7 +16,7 @@ body {
     background-image: url("../img/interviewer.png");
 }
 
-.gameNameInterview {
+.gameNameInterview {  
     font-family: 'Calligraffitti';
     font-size: 127px;
     display: flex;
@@ -295,5 +295,9 @@ font-weight: bold;
     
 audio { 
    display:none;
+}
+
+#wrongModal {
+    display: none;
 }
 
