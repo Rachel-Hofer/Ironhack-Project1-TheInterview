@@ -81,7 +81,7 @@ class Game {  //class that holds all methods to Game class
       },
       {
         qa:
-          "Question 8: What is the first line of an HTML5 file?<br> (a) document.ready()<br> (b)!DOCTYPE html<br> (c) heading<br> (d) body ",
+          "Question 8: What is the first line of an HTML5 file?<br> (a) document.ready()<br> (b) !DOCTYPE html<br> (c) heading<br> (d) body ",
         answer: "b"
       },
       {
