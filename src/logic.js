@@ -40,9 +40,7 @@ $(document).ready(function() { // JQuery start wrap
       let theQuestion = newGame.juniorQuestionsOne[newGame.nextIndex].answer;
       let theInput = $(".userTypes").val();
     
-            // if any answer is correct  pass to the next ifStatement
         if(theAnswer === theInput) { 
-          
             document.getElementById("playCorrect").play();
             // if is player one turn and not player two
         if(newGame.playerOneTurn === true && newGame.playerTwoTurn === false) {
@@ -56,9 +54,6 @@ $(document).ready(function() { // JQuery start wrap
          
           $("#scoreOne").html(newGame.playerOnePoints);
           $("#exampleModal").modal('toggle');
-            // $("#rightAnswerModal").click(function(){
-            //     $(".modal").toggle();
-            // })
 
             // increase the question
             newGame.increaseQuestion();
@@ -81,18 +76,13 @@ $(document).ready(function() { // JQuery start wrap
           $("#exampleModal").modal('toggle');
 
           newGame.increaseQuestion();
-        //   $(".userTypes").val('');
-        //     console.log(theInput)
         }
             // this else check if the answer is not correct
       } else {
         document.getElementById("playIncorrect").play();        
             if (newGame.playerOneTurn === true && newGame.playerTwoTurn === false) {
-                // $(".modal").show();
                 $('#wrongModal').modal('show')
 
-                // $("#rightAnswerModal").click($(".modal").hide());
-            // alert("That is not correct. " + newGame.candidatesName[1] + ", your turn.");
             newGame.playerOneTurn = false;
             newGame.playerTwoTurn = true;
             newGame.increaseQuestion();
@@ -102,9 +92,7 @@ $(document).ready(function() { // JQuery start wrap
         } else if (newGame.playerOneTurn === false && newGame.playerTwoTurn === true){
 
             $('#wrongModal').modal('show')
-                
-                // $("#rightAnswerModal").click($(".modal").hide());
-            // alert("That is not correct. " + newGame.candidatesName[0] + ", your turn.");
+               
             newGame.playerOneTurn = true;
             newGame.playerTwoTurn = false;
             newGame.increaseQuestion();
@@ -114,16 +102,16 @@ $(document).ready(function() { // JQuery start wrap
 
         }    
         if(newGame.nextIndex === newGame.juniorQuestionsOne.length && newGame.playerOnePoints > newGame.playerTwoPoints){
-            $(".theWinner").html = newGame.candidatesName[0]
+            // $(".theWinner").html = newGame.candidatesName[0]
             $('#winnerModal').modal('show')
             // alert("Congratulations " + newGame.candidatesName[0] + " We would like to offer you the job.")
-        document.getElementById("crowdCheer").play();
+            document.getElementById("crowdCheer").play();
         }   
         else if(newGame.nextIndex === newGame.juniorQuestionsOne.length && newGame.playerOnePoints < newGame.playerTwoPoints){
-            $(".theWinner").html = newGame.candidatesName[1]
-            $('#winnerModal').modal('show')
-        // alert("Congratulations " + newGame.candidatesName[1] + " We would like to offer you the job.")
-        
+            // $(".theWinner").html = newGame.candidatesName[1]
+            $('#winnerModal2').modal('show')
+            // alert("Congratulations " + newGame.candidatesName[1] + " We would like to offer you the job.")
+            document.getElementById("crowdCheer").play();
         };
         $(".userTypes").val("");
     })

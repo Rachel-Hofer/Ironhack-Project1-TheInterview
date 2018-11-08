@@ -77,7 +77,7 @@
   <p id="defaultLabelInput" class="defaultHide">
     <label>Answer:</label><input class="userTypes" type="text" autofocus><br>
     <br>
-    <button class="submit" type="submit">Submit</button>
+    <button id="formQuestions" class="submit" type="submit">Submit</button>
   </form>
     
     
@@ -142,7 +142,7 @@
               </button>
             </div>
             <div class="modal-body">
-              <p class="theWinner"></p>
+              <p class="theWinner">Candidate #1</p>
             </div>
             <div class="modal-footer">
               <button id="modalButton" type="button" class="btn btn-secondary" data-dismiss="modal">Okay</button>
@@ -151,6 +151,26 @@
           </div>
         </div>
       </div>
+
+      <div class="modal fade" id="winnerModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">And the job offer goes to...</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p class="theWinner">Candidate #2</p>
+              </div>
+              <div class="modal-footer">
+                <button id="modalButton" type="button" class="btn btn-secondary" data-dismiss="modal">Okay</button>
+                <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+              </div>
+            </div>
+          </div>
+        </div>
 
 <!-- 
 <div id="enterYourName" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -200,10 +220,11 @@
         </div>
       </div>
     </div>
+
   audio clips-->
-<!-- <audio id="playCorrect" src="./audio/soundsilk-Correct-Answer-Soundeffect.mp3"></audio> 
+<audio id="playCorrect" src="./audio/soundsilk-Correct-Answer-Soundeffect.mp3"></audio> 
 <audio id="playIncorrect" src="./audio/soundsilk-buzzer-wrong-answer.mp3"></audio>
-<audio id="crowdCheer" src="./audio/5_Sec_Crowd_Cheer-Mike_Koenig-1562033255.mp3"></audio> -->
+<audio id="crowdCheer" src="./audio/5_Sec_Crowd_Cheer-Mike_Koenig-1562033255.mp3"></audio>
 
 
 </body>

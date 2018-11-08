@@ -42,7 +42,7 @@ class Game {
       },
       {
         qa:
-          "Question 4: What values can an array hold?<br> (a) Numbers<br> (b) String<br> (c) Boolean<br> (d) All of hte above",
+          "Question 4: What values can an array hold?<br> (a) Numbers<br> (b) String<br> (c) Boolean<br> (d) All of the above",
         answer: "d"
       },
       {
