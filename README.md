@@ -1,3 +1,10 @@
+Technologies Used:
+ - HTML5
+ - CSS3
+ - JavaScript
+ - JQuery
+ - Bootstrap
+
 Instructions:
  - This game is a trivia game with the added competitive twist of making the setting a job interview
  - The “Interview” is specifically for Web Developers, offering 3 different "positions" (difficulty levels)
