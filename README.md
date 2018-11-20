@@ -39,17 +39,20 @@ Future Add-Ons:
 
 
 Instructor Feedback:
-    Successes:
-        1. Met all criteria necessary for Game
-            -   Winner/Loser
-            -   2 Players
-            -   Deployed
-            -   Can play the full game all the way through
-        2. Good balance between design and functionality focus
-        3. Good "game plan"/organization of the process
-    
-    Areas of Opportunity:
-        1.  Organize your JS better:
-            -   Don't write so much code inside of the logic, instead create functions OR methods/classes for what you want the logic to do, to make logic shorter/more organized/easier to read.
+ - Successes-
+    1.  Met all criteria required for game:
+        - Winner/Loser
+        - 2 Players
+        - Deployed
+        - Can play game from beginning to end
+    2.  Good balance bettween focus on design and functunality 
+    3.  Good "game plan"/organization of the process 
+   
+ - Areas of Opportunity-
+    1.  Organize your JS more:
+        - Declare your functions on a seperate JS file than your logic
+        - Avoid declaring functions inside of the logic, only call the functions already created
+
+
     
         
